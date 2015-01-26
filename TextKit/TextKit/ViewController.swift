@@ -32,7 +32,16 @@ extension ViewController {
     
     func updateFont() {
         
-        self.textView.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        let font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+        let color = UIColor.blueColor()
+        let dic = [
+            NSForegroundColorAttributeName : color,
+            NSFontAttributeName : font,
+            NSTextEffectAttributeName : NSTextEffectLetterpressStyle]
+        let attrString = NSAttributedString(string: self.textView.text, attributes: dic)
+        
+        
+        self.textView.attributedText = attrString
     }
     
 }
