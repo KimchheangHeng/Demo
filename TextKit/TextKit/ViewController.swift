@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredContentSizeDidChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        
+        self.updateFont()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: textKit-Notifiction
+extension ViewController {
+    
+    func preferredContentSizeDidChanged(notifiction: NSNotification) {
+        
+        self.updateFont()
+        
     }
-
-
+    
+    func updateFont() {
+        
+        self.textView.font = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
+    }
+    
 }
 
