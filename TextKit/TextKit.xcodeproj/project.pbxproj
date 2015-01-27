@@ -14,6 +14,7 @@
 		2C207DFD1A75D94400560809 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C207DFB1A75D94400560809 /* LaunchScreen.xib */; };
 		2C207E091A75D94400560809 /* TextKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C207E081A75D94400560809 /* TextKitTests.swift */; };
 		2C207E131A75E89A00560809 /* TimeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C207E121A75E89A00560809 /* TimeIndicatorView.swift */; };
+		2C207E171A776B2100560809 /* SyntaxHighlightTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C207E161A776B2100560809 /* SyntaxHighlightTextStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2C207E071A75D94400560809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C207E081A75D94400560809 /* TextKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextKitTests.swift; sourceTree = "<group>"; };
 		2C207E121A75E89A00560809 /* TimeIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIndicatorView.swift; sourceTree = "<group>"; };
+		2C207E161A776B2100560809 /* SyntaxHighlightTextStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyntaxHighlightTextStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				2C207E121A75E89A00560809 /* TimeIndicatorView.swift */,
 				2C207DF21A75D94400560809 /* AppDelegate.swift */,
 				2C207DF41A75D94400560809 /* ViewController.swift */,
+				2C207E161A776B2100560809 /* SyntaxHighlightTextStorage.swift */,
 				2C207DF61A75D94400560809 /* Main.storyboard */,
 				2C207DF91A75D94400560809 /* Images.xcassets */,
 				2C207DFB1A75D94400560809 /* LaunchScreen.xib */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C207E171A776B2100560809 /* SyntaxHighlightTextStorage.swift in Sources */,
 				2C207DF51A75D94400560809 /* ViewController.swift in Sources */,
 				2C207DF31A75D94400560809 /* AppDelegate.swift in Sources */,
 				2C207E131A75E89A00560809 /* TimeIndicatorView.swift in Sources */,
