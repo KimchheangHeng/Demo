@@ -170,6 +170,7 @@
 					};
 					2C207E011A75D94400560809 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = AJ6S3UXN3E;
 						TestTargetID = 2C207DEC1A75D94400560809;
 					};
 				};
@@ -346,9 +347,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongle sun (E94H5X2UL6)";
 				INFOPLIST_FILE = TextKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "67c8f5ff-fcb8-4536-8bb5-ec4477e18079";
 			};
 			name = Debug;
 		};
@@ -356,9 +359,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongle sun (E94H5X2UL6)";
 				INFOPLIST_FILE = TextKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "67c8f5ff-fcb8-4536-8bb5-ec4477e18079";
 			};
 			name = Release;
 		};
@@ -415,6 +420,7 @@
 				2C207E0E1A75D94400560809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C207E0F1A75D94400560809 /* Build configuration list for PBXNativeTarget "TextKitTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +429,7 @@
 				2C207E111A75D94400560809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

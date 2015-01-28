@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     let textStorage: SyntaxHighlightTextStorage! = SyntaxHighlightTextStorage()
     
-    let note: String! = "Shop List\n\n1. Still reading? OK, let\'s briefly discuss how to format your manuscript. In the standard format, section text is double-spaced, left-aligned, and set in a 12-point Courier font. The first line of a paragraph is indented one half inch, or 5 characters, from the margin.\n\n2. Section breaks (the visual breaks between the scenes in your story) are indicated as above using a centered number sign. To add a section break, place the cursor at the start of an empty paragraph, type the number character (\"#\"), and apply the Section Separator style, or simply center the paragraph. \n\n3. A 25 line page, then, will have an average of 250 words--a nice big round number. Four pages is about a thousand words. Four hundred pages is about a hundred thousand words.\n\n4. Chapters begin on a new page about a third of the way down and start with a centered chapter title, usually in all caps (i.e., all of the letters are capitalized). You can use the Chapter Title style to start a new chapter."
+    let note: String! = "Shop List\n\n1. Still *reading* ? OK, *from* the margin.\n\n2. Section breaks (the visual breaks between the scenes in your story) are indicated as above using a centered number sign.. \n\n3. A 25 *line* page, *Four hundred pages* is about a hundred thousand words.\n"
     
     let timeIndicatorView: TimeIndicatorView! = TimeIndicatorView(date: NSDate(timeIntervalSinceNow: 0))
     
