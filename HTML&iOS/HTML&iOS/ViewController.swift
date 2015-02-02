@@ -27,12 +27,24 @@ class ViewController: UIViewController {
     }
 }
 
+// MAARK: IBAction
+extension ViewController {
+    
+    @IBAction func addContent(sender: AnyObject) {
+        
+        let js = "var p = document.createElement(\'p\'); \np.innerText = \'new Line\';\ndocument.body.appendChild(p);"
+        webView.stringByEvaluatingJavaScriptFromString(js)
+    }
+    
+}
+
 // MAARK: webViewDelegate
 extension ViewController : UIWebViewDelegate {
     
     func webViewDidFinishLoad(webView: UIWebView) {
         
         println("webViewDidFinishLoad")
+//        webView.stringByEvaluatingJavaScriptFromString("alert('hello')")
+
     }
-    
 }
