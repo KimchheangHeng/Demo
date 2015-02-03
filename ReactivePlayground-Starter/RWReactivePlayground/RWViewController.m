@@ -33,13 +33,13 @@
     // initially hide the failure message
     self.signInFailureText.hidden = YES;
 
+    [self setupSignals];
 }
 
 -(void) setupSignals {
 
 
     RACSignal *validUserSignal =
-
             [self.usernameTextField.rac_textSignal
                     map:^id(NSString *text) {
                         return @([self isValidUsername:text]);
@@ -47,7 +47,7 @@
 
     RACSignal *validPasswordSignal =
             [self.passwordTextField.rac_textSignal
-                    map:^id (NSString *text) {
+                    map:^id(NSString *text) {
                         return @([self isValidPassword:text]);
                     }];
 
@@ -76,6 +76,41 @@
         self.signInButton.enabled = [signUpValid boolValue];
     }];
 
+//    sign in button reactive
+    [[[[self.signInButton
+            rac_signalForControlEvents:UIControlEventTouchUpInside]
+            doNext:^(id x) {
+                self.signInButton.enabled = NO;
+                self.signInFailureText.hidden = YES;
+            }]
+            flattenMap:^id(id value) {
+                return [self signInSignal];
+            }]
+            subscribeNext:^(NSNumber *signIn) {
+                NSLog(@"sign in result: %@", signIn);
+                self.signInButton.enabled = YES;
+                BOOL success = [signIn boolValue];
+                self.signInFailureText.hidden = success;
+
+                if (success) {
+                    [self performSegueWithIdentifier:@"signInSuccess" sender:self];
+                }
+            }];
+
+}
+
+- (RACSignal *)signInSignal {
+
+    return [RACSignal createSignal:^RACDisposable *(id <RACSubscriber> subscriber) {
+        [self.signInService
+                signInWithUsername:self.usernameTextField.text
+                          password:self.passwordTextField.text
+                          complete:^(BOOL success) {
+                              [subscriber sendNext:@(success)];
+                              [subscriber sendCompleted];
+                          }];
+        return nil;
+    }];
 }
 
 - (BOOL)isValidUsername:(NSString *)username {
@@ -84,23 +119,6 @@
 
 - (BOOL)isValidPassword:(NSString *)password {
     return password.length > 3;
-}
-
-- (IBAction)signInButtonTouched:(id)sender {
-    // disable all UI controls
-    self.signInButton.enabled = NO;
-    self.signInFailureText.hidden = YES;
-
-    // sign in
-    [self.signInService signInWithUsername:self.usernameTextField.text
-                                  password:self.passwordTextField.text
-                                  complete:^(BOOL success) {
-                                      self.signInButton.enabled = YES;
-                                      self.signInFailureText.hidden = success;
-                                      if (success) {
-                                          [self performSegueWithIdentifier:@"signInSuccess" sender:self];
-                                      }
-                                  }];
 }
 
 @end
