@@ -1,0 +1,42 @@
+.text
+{
+    position: absolute;
+    left: 74px;
+    width: 174px;
+    top: 71px;
+    height: 25px;
+    background: rgb(87, 87, 255);
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 14px 0;
+    -webkit-border-radius: 10px 10px 10px 10px;
+       -moz-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
+}
+.oval
+{
+    position: absolute;
+    left: 90px;
+    width: 141px;
+    top: 212px;
+    height: 141px;
+    background: rgb(87, 87, 255);
+    border: 1px solid rgb(0, 0, 0);
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+            border-radius: 50%;
+            
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 2s;
+}
+#frame
+{
+    position: absolute;
+    left: 0px;
+    width: 320px;
+    top: 0px;
+    height: 568px;
+}
