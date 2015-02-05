@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // 1. load local html
-        let res = NSBundle.mainBundle().pathForResource("web/index", ofType: "html")
+        let res = NSBundle.mainBundle().pathForResource("webAnimation/index", ofType: "html")
         let url = NSURL(fileURLWithPath: res!)
         let request = NSURLRequest(URL: url!)
         
@@ -36,6 +36,10 @@ extension ViewController {
         webView.stringByEvaluatingJavaScriptFromString(js)
     }
     
+    @IBAction func reload(sender: AnyObject) {
+        
+        webView.reload()
+    }
 }
 
 // MAARK: webViewDelegate
