@@ -1,0 +1,10 @@
+PODS:
+  - Snap (0.0.2)
+
+DEPENDENCIES:
+  - Snap
+
+SPEC CHECKSUMS:
+  Snap: 67d2c0d8cd6f3c77e3cd1e3bde8dafc7322ae3f1
+
+COCOAPODS: 0.36.0.beta.1
