@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C1171181A8A4ADF003F2075 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1171171A8A4ADF003F2075 /* main.m */; };
+		2C11711B1A8A4ADF003F2075 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11711A1A8A4ADF003F2075 /* AppDelegate.m */; };
+		2C11711E1A8A4ADF003F2075 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11711D1A8A4ADF003F2075 /* ViewController.m */; };
+		2C1171211A8A4ADF003F2075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C11711F1A8A4ADF003F2075 /* Main.storyboard */; };
+		2C1171231A8A4ADF003F2075 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C1171221A8A4ADF003F2075 /* Images.xcassets */; };
+		2C1171261A8A4ADF003F2075 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1171241A8A4ADF003F2075 /* LaunchScreen.xib */; };
+		2C1171321A8A4ADF003F2075 /* MantleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1171311A8A4ADF003F2075 /* MantleTests.m */; };
+		2C11713D1A8A4BBB003F2075 /* EMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11713C1A8A4BBB003F2075 /* EMModel.m */; };
+		2C11713F1A8A5134003F2075 /* json in Resources */ = {isa = PBXBuildFile; fileRef = 2C11713E1A8A5134003F2075 /* json */; };
+		2C1ABEC9AE55DD6E85A200BC /* libPods-Mantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D3856D42EB6C4B8E6A4A74 /* libPods-Mantle.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C11712C1A8A4ADF003F2075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C11710A1A8A4ADF003F2075 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C1171111A8A4ADF003F2075;
+			remoteInfo = Mantle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29D3856D42EB6C4B8E6A4A74 /* libPods-Mantle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mantle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1171121A8A4ADF003F2075 /* Mantle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mantle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1171161A8A4ADF003F2075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C1171171A8A4ADF003F2075 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2C1171191A8A4ADF003F2075 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2C11711A1A8A4ADF003F2075 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2C11711C1A8A4ADF003F2075 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2C11711D1A8A4ADF003F2075 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C1171201A8A4ADF003F2075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C1171221A8A4ADF003F2075 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C1171251A8A4ADF003F2075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2C11712B1A8A4ADF003F2075 /* MantleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MantleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1171301A8A4ADF003F2075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C1171311A8A4ADF003F2075 /* MantleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MantleTests.m; sourceTree = "<group>"; };
+		2C11713B1A8A4BBB003F2075 /* EMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMModel.h; sourceTree = "<group>"; };
+		2C11713C1A8A4BBB003F2075 /* EMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMModel.m; sourceTree = "<group>"; };
+		2C11713E1A8A5134003F2075 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = "<group>"; };
+		C6179B8C0D716D12DA27C628 /* Pods-Mantle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mantle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mantle/Pods-Mantle.debug.xcconfig"; sourceTree = "<group>"; };
+		C71B9FBDF421506A1483FA79 /* Pods-Mantle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mantle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mantle/Pods-Mantle.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C11710F1A8A4ADF003F2075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1ABEC9AE55DD6E85A200BC /* libPods-Mantle.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1171281A8A4ADF003F2075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C1171091A8A4ADF003F2075 = {
+			isa = PBXGroup;
+			children = (
+				2C1171141A8A4ADF003F2075 /* Mantle */,
+				2C11712E1A8A4ADF003F2075 /* MantleTests */,
+				2C1171131A8A4ADF003F2075 /* Products */,
+				C594DDA0AC961F70B87FAA55 /* Pods */,
+				6C55BAB1AE878DA22C7A79A8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C1171131A8A4ADF003F2075 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C1171121A8A4ADF003F2075 /* Mantle.app */,
+				2C11712B1A8A4ADF003F2075 /* MantleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C1171141A8A4ADF003F2075 /* Mantle */ = {
+			isa = PBXGroup;
+			children = (
+				2C1171191A8A4ADF003F2075 /* AppDelegate.h */,
+				2C11711A1A8A4ADF003F2075 /* AppDelegate.m */,
+				2C11711C1A8A4ADF003F2075 /* ViewController.h */,
+				2C11711D1A8A4ADF003F2075 /* ViewController.m */,
+				2C11713B1A8A4BBB003F2075 /* EMModel.h */,
+				2C11713C1A8A4BBB003F2075 /* EMModel.m */,
+				2C11713E1A8A5134003F2075 /* json */,
+				2C11711F1A8A4ADF003F2075 /* Main.storyboard */,
+				2C1171221A8A4ADF003F2075 /* Images.xcassets */,
+				2C1171241A8A4ADF003F2075 /* LaunchScreen.xib */,
+				2C1171151A8A4ADF003F2075 /* Supporting Files */,
+			);
+			path = Mantle;
+			sourceTree = "<group>";
+		};
+		2C1171151A8A4ADF003F2075 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C1171161A8A4ADF003F2075 /* Info.plist */,
+				2C1171171A8A4ADF003F2075 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C11712E1A8A4ADF003F2075 /* MantleTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C1171311A8A4ADF003F2075 /* MantleTests.m */,
+				2C11712F1A8A4ADF003F2075 /* Supporting Files */,
+			);
+			path = MantleTests;
+			sourceTree = "<group>";
+		};
+		2C11712F1A8A4ADF003F2075 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C1171301A8A4ADF003F2075 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C55BAB1AE878DA22C7A79A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29D3856D42EB6C4B8E6A4A74 /* libPods-Mantle.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C594DDA0AC961F70B87FAA55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6179B8C0D716D12DA27C628 /* Pods-Mantle.debug.xcconfig */,
+				C71B9FBDF421506A1483FA79 /* Pods-Mantle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C1171111A8A4ADF003F2075 /* Mantle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C1171351A8A4ADF003F2075 /* Build configuration list for PBXNativeTarget "Mantle" */;
+			buildPhases = (
+				1C69CBFE73D97DBC70BD3EF1 /* Check Pods Manifest.lock */,
+				2C11710E1A8A4ADF003F2075 /* Sources */,
+				2C11710F1A8A4ADF003F2075 /* Frameworks */,
+				2C1171101A8A4ADF003F2075 /* Resources */,
+				3A5AB4D2FB8B3FF017374AC9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mantle;
+			productName = Mantle;
+			productReference = 2C1171121A8A4ADF003F2075 /* Mantle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C11712A1A8A4ADF003F2075 /* MantleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C1171381A8A4ADF003F2075 /* Build configuration list for PBXNativeTarget "MantleTests" */;
+			buildPhases = (
+				2C1171271A8A4ADF003F2075 /* Sources */,
+				2C1171281A8A4ADF003F2075 /* Frameworks */,
+				2C1171291A8A4ADF003F2075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C11712D1A8A4ADF003F2075 /* PBXTargetDependency */,
+			);
+			name = MantleTests;
+			productName = MantleTests;
+			productReference = 2C11712B1A8A4ADF003F2075 /* MantleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C11710A1A8A4ADF003F2075 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Emiaostein;
+				TargetAttributes = {
+					2C1171111A8A4ADF003F2075 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					2C11712A1A8A4ADF003F2075 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 2C1171111A8A4ADF003F2075;
+					};
+				};
+			};
+			buildConfigurationList = 2C11710D1A8A4ADF003F2075 /* Build configuration list for PBXProject "Mantle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C1171091A8A4ADF003F2075;
+			productRefGroup = 2C1171131A8A4ADF003F2075 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C1171111A8A4ADF003F2075 /* Mantle */,
+				2C11712A1A8A4ADF003F2075 /* MantleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C1171101A8A4ADF003F2075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1171211A8A4ADF003F2075 /* Main.storyboard in Resources */,
+				2C1171261A8A4ADF003F2075 /* LaunchScreen.xib in Resources */,
+				2C11713F1A8A5134003F2075 /* json in Resources */,
+				2C1171231A8A4ADF003F2075 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1171291A8A4ADF003F2075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C69CBFE73D97DBC70BD3EF1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3A5AB4D2FB8B3FF017374AC9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mantle/Pods-Mantle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C11710E1A8A4ADF003F2075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C11711E1A8A4ADF003F2075 /* ViewController.m in Sources */,
+				2C11711B1A8A4ADF003F2075 /* AppDelegate.m in Sources */,
+				2C1171181A8A4ADF003F2075 /* main.m in Sources */,
+				2C11713D1A8A4BBB003F2075 /* EMModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C1171271A8A4ADF003F2075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C1171321A8A4ADF003F2075 /* MantleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C11712D1A8A4ADF003F2075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C1171111A8A4ADF003F2075 /* Mantle */;
+			targetProxy = 2C11712C1A8A4ADF003F2075 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C11711F1A8A4ADF003F2075 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C1171201A8A4ADF003F2075 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C1171241A8A4ADF003F2075 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C1171251A8A4ADF003F2075 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C1171331A8A4ADF003F2075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C1171341A8A4ADF003F2075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C1171361A8A4ADF003F2075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6179B8C0D716D12DA27C628 /* Pods-Mantle.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Mantle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C1171371A8A4ADF003F2075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C71B9FBDF421506A1483FA79 /* Pods-Mantle.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Mantle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C1171391A8A4ADF003F2075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MantleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mantle.app/Mantle";
+			};
+			name = Debug;
+		};
+		2C11713A1A8A4ADF003F2075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MantleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mantle.app/Mantle";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C11710D1A8A4ADF003F2075 /* Build configuration list for PBXProject "Mantle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C1171331A8A4ADF003F2075 /* Debug */,
+				2C1171341A8A4ADF003F2075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C1171351A8A4ADF003F2075 /* Build configuration list for PBXNativeTarget "Mantle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C1171361A8A4ADF003F2075 /* Debug */,
+				2C1171371A8A4ADF003F2075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C1171381A8A4ADF003F2075 /* Build configuration list for PBXNativeTarget "MantleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C1171391A8A4ADF003F2075 /* Debug */,
+				2C11713A1A8A4ADF003F2075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C11710A1A8A4ADF003F2075 /* Project object */;
+}
