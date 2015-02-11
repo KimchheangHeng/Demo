@@ -17,6 +17,7 @@
 		2C11713D1A8A4BBB003F2075 /* EMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C11713C1A8A4BBB003F2075 /* EMModel.m */; };
 		2C11713F1A8A5134003F2075 /* json in Resources */ = {isa = PBXBuildFile; fileRef = 2C11713E1A8A5134003F2075 /* json */; };
 		2C1ABEC9AE55DD6E85A200BC /* libPods-Mantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D3856D42EB6C4B8E6A4A74 /* libPods-Mantle.a */; };
+		2C215ED51A8AF2E10013FB88 /* EMSubModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C215ED41A8AF2E10013FB88 /* EMSubModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		2C11713B1A8A4BBB003F2075 /* EMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMModel.h; sourceTree = "<group>"; };
 		2C11713C1A8A4BBB003F2075 /* EMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMModel.m; sourceTree = "<group>"; };
 		2C11713E1A8A5134003F2075 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = "<group>"; };
+		2C215ED31A8AF2E10013FB88 /* EMSubModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSubModel.h; sourceTree = "<group>"; };
+		2C215ED41A8AF2E10013FB88 /* EMSubModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSubModel.m; sourceTree = "<group>"; };
 		C6179B8C0D716D12DA27C628 /* Pods-Mantle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mantle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mantle/Pods-Mantle.debug.xcconfig"; sourceTree = "<group>"; };
 		C71B9FBDF421506A1483FA79 /* Pods-Mantle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mantle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mantle/Pods-Mantle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +102,8 @@
 				2C11711D1A8A4ADF003F2075 /* ViewController.m */,
 				2C11713B1A8A4BBB003F2075 /* EMModel.h */,
 				2C11713C1A8A4BBB003F2075 /* EMModel.m */,
+				2C215ED31A8AF2E10013FB88 /* EMSubModel.h */,
+				2C215ED41A8AF2E10013FB88 /* EMSubModel.m */,
 				2C11713E1A8A5134003F2075 /* json */,
 				2C11711F1A8A4ADF003F2075 /* Main.storyboard */,
 				2C1171221A8A4ADF003F2075 /* Images.xcassets */,
@@ -291,6 +296,7 @@
 				2C11711B1A8A4ADF003F2075 /* AppDelegate.m in Sources */,
 				2C1171181A8A4ADF003F2075 /* main.m in Sources */,
 				2C11713D1A8A4BBB003F2075 /* EMModel.m in Sources */,
+				2C215ED51A8AF2E10013FB88 /* EMSubModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, ‘7.0’
+
+target 'Mantle by Swift' do
+
+pod 'Mantle', '~> 1.5.4'
+
+end
+
+target 'Mantle by SwiftTests' do
+
+end
+

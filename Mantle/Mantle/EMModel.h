@@ -7,6 +7,7 @@
 //
 
 #import "MTLModel.h"
+#import "EMSubModel.h"
 #import <MTLJSONAdapter.h>
 
 typedef NS_ENUM(NSUInteger, EMModelState) {
@@ -20,6 +21,8 @@ typedef NS_ENUM(NSUInteger, EMModelState) {
 @property(nonatomic, copy, readonly)NSString *name;
 @property(nonatomic, copy, readonly)NSDate *date;
 @property(nonatomic, assign, readonly)NSNumber *age;
+@property(nonatomic, strong)EMSubModel *subEntity;
+@property(nonatomic, strong)NSArray *subEntites;
 @property(nonatomic, copy)NSURL *url;
 
 

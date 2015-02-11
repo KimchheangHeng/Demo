@@ -1,0 +1,21 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, ‘7.0’
+
+target 'ReactiveCocoaAndViewModel' do
+
+pod 'Mantle', '~> 1.5.4'
+pod 'AFNetworking', '~> 2.5.1'
+pod 'AFNetworkActivityLogger', '~> 2.0.3'
+pod 'ReactiveCocoa'
+pod 'UIGestureRecognizer+ReactiveCocoa', '~> 0.1.0'
+pod 'ReactiveViewModel', '~> 0.3'
+pod 'Masonry', '~> 0.6.1'
+pod 'pop', '~> 1.0.7'
+pod 'AsyncDisplayKit', '~> 1.1.1'
+
+end
+
+target 'ReactiveCocoaAndViewModelTests' do
+
+end
+

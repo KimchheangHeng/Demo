@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Mantle/ViewController.m"
-            timestampString = "445277761.131446"
+            filePath = "Mantle/EMModel.m"
+            timestampString = "445314917.982471"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "+subEntityJSONTransformer"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -1,0 +1,1 @@
+../../../UIGestureRecognizer+ReactiveCocoa/GestureRecognizerRACExt/Classes/UIGestureRecognizer+ReactiveCocoaProtected.h

@@ -7,6 +7,8 @@
 //
 
 #import "EMModel.h"
+#import "EMSubModel.h"
+#import <MTLJSONAdapter.h>
 #import <Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h>
 #import <MTLValueTransformer.h>
 
@@ -43,6 +45,29 @@
   } reverseBlock:^(NSDate *date) {
     return [dateFormatter stringFromDate:date];
   }];
+}
+
++ (NSValueTransformer *)subEntityJSONTransformer {
+    
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSDictionary *ModelStr) {
+        
+        return [MTLJSONAdapter modelOfClass:[EMSubModel class] fromJSONDictionary:ModelStr error:nil];
+    } reverseBlock:^(EMSubModel *subEntity) {
+        
+        return  [MTLJSONAdapter JSONDictionaryFromModel:subEntity];
+    }];
+}
+
++ (NSValueTransformer *)subEntitesJSONTransformer {
+    
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *ModelStrs) {
+        
+        return [MTLJSONAdapter modelsOfClass:[EMSubModel class] fromJSONArray:ModelStrs error:nil];
+        
+    } reverseBlock:^(NSArray *subEntities) {
+
+        return  [MTLJSONAdapter JSONArrayFromModels:subEntities];
+    }];
 }
 
 @end

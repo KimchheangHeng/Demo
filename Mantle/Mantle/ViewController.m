@@ -26,10 +26,12 @@
   
   EMModel *model = [MTLJSONAdapter modelOfClass:[EMModel class] fromJSONDictionary:dic error:nil];
   
-//  NSDictionary *serialDic = [MTLJSONAdapter JSONDictionaryFromModel:model];
+  NSDictionary *serialDic = [MTLJSONAdapter JSONDictionaryFromModel:model];
   
-  NSLog(@"%s",[model.date isKindOfClass:[NSDate class]] ? "YES" : "NO");
-  
+//  NSLog(@"%s",[model.subEntity isKindOfClass:[EMSubModel class]] ? "YES" : "NO");
+    NSLog(@"%@", model.subEntites);
+    NSLog(@"%@", serialDic);
+
 }
 
 @end
