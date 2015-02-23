@@ -68,7 +68,7 @@
   [[frameSignal
    map:^id(NSValue *value) {
      
-     NSLog(@"TEXT:%@, FRAME:%@", NSStringFromCGRect(_text.frame),value);
+//     NSLog(@"TEXT:%@, FRAME:%@", NSStringFromCGRect(_text.frame),value);
      
      CGRect vFrame = [value CGRectValue];
      
@@ -90,15 +90,45 @@
 }
 
 - (void)setupTextView {
+
   
   UITextView *textView = [[UITextView alloc] initWithFrame:self.bounds];
-  textView.backgroundColor = [UIColor lightGrayColor];
+  textView.backgroundColor = [UIColor redColor];
   textView.attributedText = [self myString];
   
-//  RAC(textView, text) = RACObserve(_viewModel, string);
+  CAShapeLayer * rectangle = [CAShapeLayer layer];
+  rectangle.frame           = textView.bounds;
+  rectangle.fillColor       = [UIColor colorWithRed:0.902 green: 0.902 blue:0.902 alpha:1].CGColor;
+  rectangle.strokeColor     = [UIColor blackColor].CGColor;
+  rectangle.lineDashPattern = @[@10, @10];
+  rectangle.path            = [self rectanglePath:textView.bounds].CGPath;
+  
+  textView.layer.mask = rectangle;
+
+  RACSignal *fra = RACObserve(textView, bounds);
+//  RAC(rectangle, bounds) = RACObserve(_viewModel, frame);
+  [[fra
+   map:^id(NSValue *value) {
+     
+     CGRect fr = [value CGRectValue];
+     
+     return [NSValue valueWithCGRect:CGRectMake(0, 0, CGRectGetWidth(fr), CGRectGetHeight(fr))];
+     
+   }] subscribeNext:^(NSValue *value) {
+     CGRect fr = [value CGRectValue];
+     rectangle.path = [self rectanglePath:CGRectMake(0, 0, fr.size.width - 10, fr.size.height - 10)].CGPath;
+     
+     NSLog(@"%@", value);
+   }];
+  RAC(textView, text) = RACObserve(_viewModel, string);
   RAC(_viewModel, string) = textView.rac_textSignal;
   self.textView = textView;
   [self addSubview:textView];
+}
+
+- (UIBezierPath*)rectanglePath:(CGRect)rect{
+  UIBezierPath*  rectanglePath = [UIBezierPath bezierPathWithRect:rect];
+  return rectanglePath;
 }
 
 - (NSAttributedString*)myString
@@ -169,12 +199,12 @@
   return rectanglePath;
 }
 
-- (void)drawRect:(CGRect)rect {
-  
-  [super drawRect:rect];
-  
-  [self drawCanvas1WithFrame:rect];
-}
+//- (void)drawRect:(CGRect)rect {
+//  
+//  [super drawRect:rect];
+//  
+//  [self drawCanvas1WithFrame:rect];
+//}
 
 - (void)drawCanvas1WithFrame: (CGRect)frame
 {

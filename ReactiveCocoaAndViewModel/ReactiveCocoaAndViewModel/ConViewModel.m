@@ -84,7 +84,7 @@
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     path = [path stringByAppendingPathComponent:@"content"];
     
-    NSLog(@"%@",x);
+//    NSLog(@"%@",x);
     
     [x writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
   }];
