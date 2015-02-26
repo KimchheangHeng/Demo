@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C02A3831A9038C300C392C3 /* ConModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C02A3821A9038C300C392C3 /* ConModel.m */; };
+		2C02A3861A9038E100C392C3 /* ConView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C02A3851A9038E100C392C3 /* ConView.m */; };
+		2C02A3891A90391A00C392C3 /* ConViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C02A3881A90391A00C392C3 /* ConViewModel.m */; };
+		2C02A38F1A90F87D00C392C3 /* content in Resources */ = {isa = PBXBuildFile; fileRef = 2C02A38E1A90F87D00C392C3 /* content */; };
+		2C02A3911A90FE5A00C392C3 /* shoujin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2C02A3901A90FE5A00C392C3 /* shoujin.ttf */; };
+		2C02A3931A90FEEA00C392C3 /* Wyue-GutiFangsong-NC.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2C02A3921A90FEEA00C392C3 /* Wyue-GutiFangsong-NC.otf */; };
+		2C02A3991A91048C00C392C3 /* QCMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C02A3981A91048C00C392C3 /* QCMethod.m */; };
 		2C215F601A8B51DA0013FB88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C215F5F1A8B51DA0013FB88 /* main.m */; };
 		2C215F631A8B51DA0013FB88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C215F621A8B51DA0013FB88 /* AppDelegate.m */; };
 		2C215F661A8B51DA0013FB88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C215F651A8B51DA0013FB88 /* ViewController.m */; };
@@ -14,8 +21,6 @@
 		2C215F6B1A8B51DA0013FB88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C215F6A1A8B51DA0013FB88 /* Images.xcassets */; };
 		2C215F6E1A8B51DA0013FB88 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C215F6C1A8B51DA0013FB88 /* LaunchScreen.xib */; };
 		2C215F7A1A8B51DA0013FB88 /* ReactiveCocoaAndViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C215F791A8B51DA0013FB88 /* ReactiveCocoaAndViewModelTests.m */; };
-		2C215F851A8B55520013FB88 /* EMContainerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C215F841A8B55520013FB88 /* EMContainerViewModel.m */; };
-		2C215F881A8B55670013FB88 /* ContainerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C215F871A8B55670013FB88 /* ContainerModel.m */; };
 		43B16F795A3A9E49CAE2BAD0 /* libPods-ReactiveCocoaAndViewModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09369B1ADBC84BECFAE6ED16 /* libPods-ReactiveCocoaAndViewModel.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,20 @@
 
 /* Begin PBXFileReference section */
 		09369B1ADBC84BECFAE6ED16 /* libPods-ReactiveCocoaAndViewModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactiveCocoaAndViewModel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C02A3811A9038C300C392C3 /* ConModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConModel.h; sourceTree = "<group>"; };
+		2C02A3821A9038C300C392C3 /* ConModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConModel.m; sourceTree = "<group>"; };
+		2C02A3841A9038E100C392C3 /* ConView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConView.h; sourceTree = "<group>"; };
+		2C02A3851A9038E100C392C3 /* ConView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConView.m; sourceTree = "<group>"; };
+		2C02A3871A90391A00C392C3 /* ConViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConViewModel.h; sourceTree = "<group>"; };
+		2C02A3881A90391A00C392C3 /* ConViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConViewModel.m; sourceTree = "<group>"; };
+		2C02A38B1A903AC000C392C3 /* ReactViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactViewProtocol.h; sourceTree = "<group>"; };
+		2C02A38C1A903C3200C392C3 /* ViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelProtocol.h; sourceTree = "<group>"; };
+		2C02A38D1A9041FF00C392C3 /* conViewEditServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conViewEditServices.h; sourceTree = "<group>"; };
+		2C02A38E1A90F87D00C392C3 /* content */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = content; sourceTree = "<group>"; };
+		2C02A3901A90FE5A00C392C3 /* shoujin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = shoujin.ttf; sourceTree = "<group>"; };
+		2C02A3921A90FEEA00C392C3 /* Wyue-GutiFangsong-NC.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wyue-GutiFangsong-NC.otf"; sourceTree = "<group>"; };
+		2C02A3971A91048C00C392C3 /* QCMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCMethod.h; sourceTree = "<group>"; };
+		2C02A3981A91048C00C392C3 /* QCMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCMethod.m; sourceTree = "<group>"; };
 		2C215F5A1A8B51DA0013FB88 /* ReactiveCocoaAndViewModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaAndViewModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C215F5E1A8B51DA0013FB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C215F5F1A8B51DA0013FB88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,10 +63,6 @@
 		2C215F731A8B51DA0013FB88 /* ReactiveCocoaAndViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveCocoaAndViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C215F781A8B51DA0013FB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C215F791A8B51DA0013FB88 /* ReactiveCocoaAndViewModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveCocoaAndViewModelTests.m; sourceTree = "<group>"; };
-		2C215F831A8B55520013FB88 /* EMContainerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMContainerViewModel.h; sourceTree = "<group>"; };
-		2C215F841A8B55520013FB88 /* EMContainerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMContainerViewModel.m; sourceTree = "<group>"; };
-		2C215F861A8B55670013FB88 /* ContainerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerModel.h; sourceTree = "<group>"; };
-		2C215F871A8B55670013FB88 /* ContainerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerModel.m; sourceTree = "<group>"; };
 		9AB24351B5C4F5DF554AA002 /* Pods-ReactiveCocoaAndViewModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaAndViewModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaAndViewModel/Pods-ReactiveCocoaAndViewModel.debug.xcconfig"; sourceTree = "<group>"; };
 		A95A3F8654905B324922C251 /* Pods-ReactiveCocoaAndViewModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaAndViewModel.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaAndViewModel/Pods-ReactiveCocoaAndViewModel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +86,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C00A64B1A8D89EB00605140 /* VIewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2C02A3871A90391A00C392C3 /* ConViewModel.h */,
+				2C02A3881A90391A00C392C3 /* ConViewModel.m */,
+			);
+			name = VIewModel;
+			sourceTree = "<group>";
+		};
+		2C00A64C1A8D89F300605140 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C02A3811A9038C300C392C3 /* ConModel.h */,
+				2C02A3821A9038C300C392C3 /* ConModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2C00A64D1A8D89F900605140 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C02A3841A9038E100C392C3 /* ConView.h */,
+				2C02A3851A9038E100C392C3 /* ConView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2C00A6541A8D900F00605140 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2C02A38B1A903AC000C392C3 /* ReactViewProtocol.h */,
+				2C02A38C1A903C3200C392C3 /* ViewModelProtocol.h */,
+				2C02A38D1A9041FF00C392C3 /* conViewEditServices.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		2C215F511A8B51DA0013FB88 = {
 			isa = PBXGroup;
 			children = (
@@ -94,14 +146,17 @@
 		2C215F5C1A8B51DA0013FB88 /* ReactiveCocoaAndViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2C02A3971A91048C00C392C3 /* QCMethod.h */,
+				2C02A3981A91048C00C392C3 /* QCMethod.m */,
+				2C00A6541A8D900F00605140 /* Protocol */,
+				2C00A64D1A8D89F900605140 /* View */,
+				2C00A64C1A8D89F300605140 /* Model */,
+				2C00A64B1A8D89EB00605140 /* VIewModel */,
 				2C215F611A8B51DA0013FB88 /* AppDelegate.h */,
 				2C215F621A8B51DA0013FB88 /* AppDelegate.m */,
 				2C215F641A8B51DA0013FB88 /* ViewController.h */,
 				2C215F651A8B51DA0013FB88 /* ViewController.m */,
-				2C215F831A8B55520013FB88 /* EMContainerViewModel.h */,
-				2C215F841A8B55520013FB88 /* EMContainerViewModel.m */,
-				2C215F861A8B55670013FB88 /* ContainerModel.h */,
-				2C215F871A8B55670013FB88 /* ContainerModel.m */,
+				2C02A38E1A90F87D00C392C3 /* content */,
 				2C215F671A8B51DA0013FB88 /* Main.storyboard */,
 				2C215F6A1A8B51DA0013FB88 /* Images.xcassets */,
 				2C215F6C1A8B51DA0013FB88 /* LaunchScreen.xib */,
@@ -113,6 +168,8 @@
 		2C215F5D1A8B51DA0013FB88 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C02A3921A90FEEA00C392C3 /* Wyue-GutiFangsong-NC.otf */,
+				2C02A3901A90FE5A00C392C3 /* shoujin.ttf */,
 				2C215F5E1A8B51DA0013FB88 /* Info.plist */,
 				2C215F5F1A8B51DA0013FB88 /* main.m */,
 			);
@@ -237,7 +294,10 @@
 			files = (
 				2C215F691A8B51DA0013FB88 /* Main.storyboard in Resources */,
 				2C215F6E1A8B51DA0013FB88 /* LaunchScreen.xib in Resources */,
+				2C02A3931A90FEEA00C392C3 /* Wyue-GutiFangsong-NC.otf in Resources */,
+				2C02A38F1A90F87D00C392C3 /* content in Resources */,
 				2C215F6B1A8B51DA0013FB88 /* Images.xcassets in Resources */,
+				2C02A3911A90FE5A00C392C3 /* shoujin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +348,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C02A3861A9038E100C392C3 /* ConView.m in Sources */,
 				2C215F661A8B51DA0013FB88 /* ViewController.m in Sources */,
 				2C215F631A8B51DA0013FB88 /* AppDelegate.m in Sources */,
-				2C215F851A8B55520013FB88 /* EMContainerViewModel.m in Sources */,
-				2C215F881A8B55670013FB88 /* ContainerModel.m in Sources */,
+				2C02A3831A9038C300C392C3 /* ConModel.m in Sources */,
 				2C215F601A8B51DA0013FB88 /* main.m in Sources */,
+				2C02A3991A91048C00C392C3 /* QCMethod.m in Sources */,
+				2C02A3891A90391A00C392C3 /* ConViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +479,11 @@
 			baseConfigurationReference = 9AB24351B5C4F5DF554AA002 /* Pods-ReactiveCocoaAndViewModel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongle sun (E94H5X2UL6)";
 				INFOPLIST_FILE = ReactiveCocoaAndViewModel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "67c8f5ff-fcb8-4536-8bb5-ec4477e18079";
 			};
 			name = Debug;
 		};
@@ -428,9 +492,11 @@
 			baseConfigurationReference = A95A3F8654905B324922C251 /* Pods-ReactiveCocoaAndViewModel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yongle sun (E94H5X2UL6)";
 				INFOPLIST_FILE = ReactiveCocoaAndViewModel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "67c8f5ff-fcb8-4536-8bb5-ec4477e18079";
 			};
 			name = Release;
 		};
