@@ -15,6 +15,7 @@
 		2C215EFB1A8B381B0013FB88 /* Mantle_by_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C215EFA1A8B381B0013FB88 /* Mantle_by_SwiftTests.swift */; };
 		2C215F091A8B39F40013FB88 /* EMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C215F081A8B39F40013FB88 /* EMModel.swift */; };
 		2C215F0B1A8B3B730013FB88 /* json in Resources */ = {isa = PBXBuildFile; fileRef = 2C215F0A1A8B3B730013FB88 /* json */; };
+		2C243EE71AADD43900408467 /* EMSubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C243EE61AADD43900408467 /* EMSubModel.swift */; };
 		D0E4F4A609C86DFEAB31C203 /* libPods-Mantle by Swift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86C6A13064536940534E7725 /* libPods-Mantle by Swift.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		2C215F041A8B39330013FB88 /* Mantle by Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mantle by Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C215F081A8B39F40013FB88 /* EMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMModel.swift; sourceTree = "<group>"; };
 		2C215F0A1A8B3B730013FB88 /* json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json; sourceTree = "<group>"; };
+		2C243EE61AADD43900408467 /* EMSubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMSubModel.swift; sourceTree = "<group>"; };
 		86C6A13064536940534E7725 /* libPods-Mantle by Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mantle by Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAB863ED1AF75F692600433 /* Pods-Mantle by Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mantle by Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mantle by Swift/Pods-Mantle by Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				2C215EE41A8B381B0013FB88 /* AppDelegate.swift */,
 				2C215EE61A8B381B0013FB88 /* ViewController.swift */,
 				2C215F081A8B39F40013FB88 /* EMModel.swift */,
+				2C243EE61AADD43900408467 /* EMSubModel.swift */,
 				2C215F0A1A8B3B730013FB88 /* json */,
 				2C215EE81A8B381B0013FB88 /* Main.storyboard */,
 				2C215EEB1A8B381B0013FB88 /* Images.xcassets */,
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C243EE71AADD43900408467 /* EMSubModel.swift in Sources */,
 				2C215EE71A8B381B0013FB88 /* ViewController.swift in Sources */,
 				2C215F091A8B39F40013FB88 /* EMModel.swift in Sources */,
 				2C215EE51A8B381B0013FB88 /* AppDelegate.swift in Sources */,
