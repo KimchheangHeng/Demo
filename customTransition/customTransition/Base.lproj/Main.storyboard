@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eSS-J4-E1a">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -34,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBk-nm-CNm">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBk-nm-CNm">
                                 <rect key="frame" x="0.0" y="465" width="600" height="135"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Next">
@@ -44,23 +43,19 @@
                                     <segue destination="zww-SC-klh" kind="show" id="itY-dC-GbZ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Epic.png" translatesAutoresizingMaskIntoConstraints="NO" id="xPz-On-vCG">
-                                <rect key="frame" x="33" y="57" width="534" height="339"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Epic.png" translatesAutoresizingMaskIntoConstraints="NO" id="xPz-On-vCG">
+                                <rect key="frame" x="33" y="57" width="534" height="199"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="xPz-On-vCG" secondAttribute="height" multiplier="178:113" id="YR6-sP-Ouk"/>
+                                    <constraint firstAttribute="height" constant="199" id="4tb-kN-LOo"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="xPz-On-vCG" secondAttribute="centerX" id="03W-rU-dUc"/>
-                            <constraint firstItem="xPz-On-vCG" firstAttribute="leading" secondItem="ypT-kC-vWE" secondAttribute="leadingMargin" constant="17" id="1Ye-tv-1hp"/>
-                            <constraint firstItem="hBk-nm-CNm" firstAttribute="centerX" secondItem="xPz-On-vCG" secondAttribute="centerX" id="4Ji-XD-sel"/>
-                            <constraint firstItem="hBk-nm-CNm" firstAttribute="top" secondItem="xPz-On-vCG" secondAttribute="bottom" constant="69" id="AtM-eK-OXo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xPz-On-vCG" secondAttribute="trailing" constant="17" id="LvQ-32-xBY"/>
-                            <constraint firstItem="hBk-nm-CNm" firstAttribute="leading" secondItem="ypT-kC-vWE" secondAttribute="leading" id="PUi-dq-PuB"/>
-                            <constraint firstItem="xPz-On-vCG" firstAttribute="top" secondItem="ZgN-8G-aHP" secondAttribute="bottom" constant="37" id="giU-Mw-gjw"/>
-                            <constraint firstItem="hBk-nm-CNm" firstAttribute="bottom" secondItem="Fd7-kd-Rfn" secondAttribute="top" id="m8d-dX-Ebp"/>
+                            <constraint firstItem="xPz-On-vCG" firstAttribute="centerX" secondItem="hBk-nm-CNm" secondAttribute="centerX" id="B9x-kg-P8s"/>
+                            <constraint firstItem="xPz-On-vCG" firstAttribute="centerX" secondItem="ypT-kC-vWE" secondAttribute="centerX" id="ItD-1d-LPi"/>
+                            <constraint firstItem="xPz-On-vCG" firstAttribute="leading" secondItem="ypT-kC-vWE" secondAttribute="leadingMargin" constant="17" id="qau-Tx-vEO"/>
+                            <constraint firstItem="xPz-On-vCG" firstAttribute="top" secondItem="ZgN-8G-aHP" secondAttribute="bottom" constant="37" id="tiv-0z-xwD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vYe-2S-AUa"/>
@@ -84,49 +79,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OSa-ca-bGe">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zG4-R7-bxK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tc2-Vf-Khj">
-                                <rect key="frame" x="16" y="265" width="568" height="69"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OSa-ca-bGe">
+                                <rect key="frame" x="162" y="148" width="277" height="304"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="9qw-9t-YL4"/>
-                                    <constraint firstAttribute="width" secondItem="tc2-Vf-Khj" secondAttribute="height" multiplier="568:69" id="VgF-z7-DJX"/>
+                                    <constraint firstAttribute="width" constant="277" id="bKa-Sp-4ZR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Back">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTT-oo-04r">
+                                <rect key="frame" x="277" y="562" width="46" height="30"/>
+                                <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kRO-Ga-kaL" kind="custom" identifier="pop" customClass="EMSege" customModule="customTransition" customModuleProvider="target" id="c6F-vW-tde"/>
+                                    <action selector="buttonAction:" destination="zww-SC-klh" eventType="touchUpInside" id="skl-eb-nNN"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tc2-Vf-Khj" firstAttribute="trailing" secondItem="pJ1-We-yPm" secondAttribute="trailingMargin" id="4Is-Fp-FPT"/>
-                            <constraint firstItem="tc2-Vf-Khj" firstAttribute="leading" secondItem="pJ1-We-yPm" secondAttribute="leadingMargin" id="BBx-te-Sje"/>
-                            <constraint firstAttribute="centerX" secondItem="tc2-Vf-Khj" secondAttribute="centerX" id="NCc-pE-PGG"/>
-                            <constraint firstItem="OSa-ca-bGe" firstAttribute="leading" secondItem="pJ1-We-yPm" secondAttribute="leading" id="TG7-lx-rFp"/>
-                            <constraint firstAttribute="trailing" secondItem="OSa-ca-bGe" secondAttribute="trailing" id="X3U-kG-ZlA"/>
-                            <constraint firstAttribute="centerY" secondItem="tc2-Vf-Khj" secondAttribute="centerY" constant="0.5" id="kHa-AB-UUE"/>
-                            <constraint firstItem="OSa-ca-bGe" firstAttribute="top" secondItem="pJ1-We-yPm" secondAttribute="top" id="kzi-Eq-Ado"/>
-                            <constraint firstItem="OSa-ca-bGe" firstAttribute="bottom" secondItem="che-Wx-ee7" secondAttribute="top" id="x3L-GM-azd"/>
+                            <constraint firstItem="zG4-R7-bxK" firstAttribute="bottom" secondItem="che-Wx-ee7" secondAttribute="top" id="25S-hw-xmL"/>
+                            <constraint firstItem="OSa-ca-bGe" firstAttribute="centerY" secondItem="pJ1-We-yPm" secondAttribute="centerY" id="Uv3-uc-O46"/>
+                            <constraint firstItem="che-Wx-ee7" firstAttribute="top" secondItem="XTT-oo-04r" secondAttribute="bottom" constant="8" symbolic="YES" id="aHe-uO-igu"/>
+                            <constraint firstItem="zG4-R7-bxK" firstAttribute="leading" secondItem="pJ1-We-yPm" secondAttribute="leading" id="ehg-pq-uuv"/>
+                            <constraint firstItem="OSa-ca-bGe" firstAttribute="centerX" secondItem="pJ1-We-yPm" secondAttribute="centerX" id="ejB-FJ-iH5"/>
+                            <constraint firstItem="zG4-R7-bxK" firstAttribute="centerY" secondItem="OSa-ca-bGe" secondAttribute="centerY" id="iL6-kg-QSU"/>
+                            <constraint firstItem="OSa-ca-bGe" firstAttribute="top" secondItem="oof-nY-8V7" secondAttribute="bottom" constant="128" id="nFp-rp-AOg"/>
+                            <constraint firstItem="XTT-oo-04r" firstAttribute="centerX" secondItem="OSa-ca-bGe" secondAttribute="centerX" id="oDc-wC-3rh"/>
+                            <constraint firstItem="zG4-R7-bxK" firstAttribute="centerX" secondItem="XTT-oo-04r" secondAttribute="centerX" id="sDD-ag-AMf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageVIew" destination="OSa-ca-bGe" id="I93-JN-xvh"/>
+                        <outlet property="snapshotView" destination="zG4-R7-bxK" id="orT-G5-bNZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0b-hV-MJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995" y="439"/>
+            <point key="canvasLocation" x="1074" y="371"/>
         </scene>
     </scenes>
     <resources>
         <image name="Epic.png" width="800" height="600"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="c6F-vW-tde"/>
-    </inferredMetricsTieBreakers>
 </document>

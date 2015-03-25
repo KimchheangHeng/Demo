@@ -7,25 +7,65 @@
 //
 
 import UIKit
+import Snap
 
 class SubViewController: UIViewController {
-
+  
+  let onepadding = UIEdgeInsetsMake(10, 10, 10, 10)
+  let twopadding = UIEdgeInsetsMake(200, 10, 200, 10)
+  
+  @IBOutlet weak var snapshotView: UIView!
    @IBOutlet weak var imageVIew: UIImageView!
+  var subVie: UIView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      
+      imageVIew.snp_remakeConstraints { (make) -> Void in
+        make.edges.equalTo(self.view).with.insets(self.twopadding)
+        return
+      }
 
-        // Do any additional setup after loading the view.
+    }
+  
+  func performAction(finished:((Bool) -> Void)?) {
+    imageVIew.snp_remakeConstraints { (make) -> Void in
+      make.edges.equalTo(self.view).with.insets(self.onepadding)
+      return
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    UIView.animateWithDuration(0.5, animations: { () -> Void in
+      
+      self.view.layoutIfNeeded()
+    }) { (Bool) -> Void in
+      
+      if (finished != nil) {
+        finished!(Bool)
+      }
     }
-    */
-
+  }
+  
+  func performBackAction(finished:((Bool) -> Void)?) {
+    imageVIew.snp_remakeConstraints { (make) -> Void in
+      make.edges.equalTo(self.view).with.insets(self.twopadding)
+      return
+    }
+    
+    UIView.animateWithDuration(0.5, animations: { () -> Void in
+      
+      self.view.layoutIfNeeded()
+      }) { (Bool) -> Void in
+        
+        if (finished != nil) {
+          finished!(Bool)
+        }
+    }
+  }
+  
+  
+  @IBAction func buttonAction(sender: UIButton) {
+    
+    self.navigationController?.popViewControllerAnimated(true)
+  }
 }

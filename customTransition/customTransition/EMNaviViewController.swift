@@ -11,6 +11,7 @@ import UIKit
 class EMNaviViewController: UINavigationController, UINavigationControllerDelegate {
   
   let transitionAnimatoin = TransitionAnimation()
+  let transitionBackAnimation = PopTransitionAnimation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class EMNaviViewController: UINavigationController, UINavigationControllerDelega
       case .Push:
         return transitionAnimatoin
       case .Pop:
-        return transitionAnimatoin
+        return transitionBackAnimation
       case .None:
         return nil
         

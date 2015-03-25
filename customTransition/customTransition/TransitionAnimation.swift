@@ -12,14 +12,17 @@ class TransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning {
   
   func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
     
-    return 1
+    return 0.2
   }
   
   func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
     
     let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)! as ViewController
     let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)! as SubViewController
-    toViewController.imageVIew.image = fromViewController.imageVIew.image;
+    let snapshot = fromViewController.view.snapshotViewAfterScreenUpdates(false)
+
+    toViewController.snapshotView.addSubview(snapshot)
+    toViewController.imageVIew.image = fromViewController.imageVIew.image
     
     let finalFrameForVC = transitionContext.finalFrameForViewController(toViewController)
     let containerView = transitionContext.containerView()
@@ -30,12 +33,17 @@ class TransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning {
     containerView.addSubview(toViewController.view)
     
     UIView.animateWithDuration(transitionDuration(transitionContext), delay: 0.0, usingSpringWithDamping: 5, initialSpringVelocity: 0.0, options: .CurveEaseInOut, animations: {
-      fromViewController.view.alpha = 0
+//      fromViewController.view.alpha = 1
 //      toViewController.view.frame = finalFrameForVC
       toViewController.view.alpha = 1
       }, completion: {
         finished in
+        toViewController.performAction({ (Bool) -> Void in
+          
+          
+        })
         transitionContext.completeTransition(true)
+        
         fromViewController.view.alpha = 1.0
     })
   }
