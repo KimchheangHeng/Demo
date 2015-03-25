@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CF09CA31AC2A34100F71381 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF09CA21AC2A34100F71381 /* AppDelegate.swift */; };
+		2CF09CA51AC2A34100F71381 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF09CA41AC2A34100F71381 /* ViewController.swift */; };
+		2CF09CA81AC2A34100F71381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF09CA61AC2A34100F71381 /* Main.storyboard */; };
+		2CF09CAA1AC2A34100F71381 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF09CA91AC2A34100F71381 /* Images.xcassets */; };
+		2CF09CAD1AC2A34100F71381 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CF09CAB1AC2A34100F71381 /* LaunchScreen.xib */; };
+		2CF09CB91AC2A34100F71381 /* mutliViewGestureControllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF09CB81AC2A34100F71381 /* mutliViewGestureControllTests.swift */; };
+		2CF09CC31AC2A45400F71381 /* Beer cellar app icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CF09CC21AC2A45400F71381 /* Beer cellar app icon.png */; };
+		2CF09CC51AC2A4FC00F71381 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF09CC41AC2A4FC00F71381 /* SubViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CF09CB31AC2A34100F71381 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CF09C951AC2A34100F71381 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CF09C9C1AC2A34100F71381;
+			remoteInfo = mutliViewGestureControll;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CF09C9D1AC2A34100F71381 /* mutliViewGestureControll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mutliViewGestureControll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF09CA11AC2A34100F71381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF09CA21AC2A34100F71381 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CF09CA41AC2A34100F71381 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CF09CA71AC2A34100F71381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CF09CA91AC2A34100F71381 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2CF09CAC1AC2A34100F71381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2CF09CB21AC2A34100F71381 /* mutliViewGestureControllTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mutliViewGestureControllTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF09CB71AC2A34100F71381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF09CB81AC2A34100F71381 /* mutliViewGestureControllTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mutliViewGestureControllTests.swift; sourceTree = "<group>"; };
+		2CF09CC21AC2A45400F71381 /* Beer cellar app icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Beer cellar app icon.png"; sourceTree = "<group>"; };
+		2CF09CC41AC2A4FC00F71381 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CF09C9A1AC2A34100F71381 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF09CAF1AC2A34100F71381 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CF09C941AC2A34100F71381 = {
+			isa = PBXGroup;
+			children = (
+				2CF09C9F1AC2A34100F71381 /* mutliViewGestureControll */,
+				2CF09CB51AC2A34100F71381 /* mutliViewGestureControllTests */,
+				2CF09C9E1AC2A34100F71381 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CF09C9E1AC2A34100F71381 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CF09C9D1AC2A34100F71381 /* mutliViewGestureControll.app */,
+				2CF09CB21AC2A34100F71381 /* mutliViewGestureControllTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CF09C9F1AC2A34100F71381 /* mutliViewGestureControll */ = {
+			isa = PBXGroup;
+			children = (
+				2CF09CC21AC2A45400F71381 /* Beer cellar app icon.png */,
+				2CF09CA21AC2A34100F71381 /* AppDelegate.swift */,
+				2CF09CA41AC2A34100F71381 /* ViewController.swift */,
+				2CF09CC41AC2A4FC00F71381 /* SubViewController.swift */,
+				2CF09CA61AC2A34100F71381 /* Main.storyboard */,
+				2CF09CA91AC2A34100F71381 /* Images.xcassets */,
+				2CF09CAB1AC2A34100F71381 /* LaunchScreen.xib */,
+				2CF09CA01AC2A34100F71381 /* Supporting Files */,
+			);
+			path = mutliViewGestureControll;
+			sourceTree = "<group>";
+		};
+		2CF09CA01AC2A34100F71381 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CF09CA11AC2A34100F71381 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CF09CB51AC2A34100F71381 /* mutliViewGestureControllTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CF09CB81AC2A34100F71381 /* mutliViewGestureControllTests.swift */,
+				2CF09CB61AC2A34100F71381 /* Supporting Files */,
+			);
+			path = mutliViewGestureControllTests;
+			sourceTree = "<group>";
+		};
+		2CF09CB61AC2A34100F71381 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CF09CB71AC2A34100F71381 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CF09C9C1AC2A34100F71381 /* mutliViewGestureControll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF09CBC1AC2A34100F71381 /* Build configuration list for PBXNativeTarget "mutliViewGestureControll" */;
+			buildPhases = (
+				2CF09C991AC2A34100F71381 /* Sources */,
+				2CF09C9A1AC2A34100F71381 /* Frameworks */,
+				2CF09C9B1AC2A34100F71381 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mutliViewGestureControll;
+			productName = mutliViewGestureControll;
+			productReference = 2CF09C9D1AC2A34100F71381 /* mutliViewGestureControll.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CF09CB11AC2A34100F71381 /* mutliViewGestureControllTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF09CBF1AC2A34100F71381 /* Build configuration list for PBXNativeTarget "mutliViewGestureControllTests" */;
+			buildPhases = (
+				2CF09CAE1AC2A34100F71381 /* Sources */,
+				2CF09CAF1AC2A34100F71381 /* Frameworks */,
+				2CF09CB01AC2A34100F71381 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CF09CB41AC2A34100F71381 /* PBXTargetDependency */,
+			);
+			name = mutliViewGestureControllTests;
+			productName = mutliViewGestureControllTests;
+			productReference = 2CF09CB21AC2A34100F71381 /* mutliViewGestureControllTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CF09C951AC2A34100F71381 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "BoTai Technology";
+				TargetAttributes = {
+					2CF09C9C1AC2A34100F71381 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					2CF09CB11AC2A34100F71381 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 2CF09C9C1AC2A34100F71381;
+					};
+				};
+			};
+			buildConfigurationList = 2CF09C981AC2A34100F71381 /* Build configuration list for PBXProject "mutliViewGestureControll" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CF09C941AC2A34100F71381;
+			productRefGroup = 2CF09C9E1AC2A34100F71381 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CF09C9C1AC2A34100F71381 /* mutliViewGestureControll */,
+				2CF09CB11AC2A34100F71381 /* mutliViewGestureControllTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CF09C9B1AC2A34100F71381 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF09CA81AC2A34100F71381 /* Main.storyboard in Resources */,
+				2CF09CAD1AC2A34100F71381 /* LaunchScreen.xib in Resources */,
+				2CF09CC31AC2A45400F71381 /* Beer cellar app icon.png in Resources */,
+				2CF09CAA1AC2A34100F71381 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF09CB01AC2A34100F71381 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CF09C991AC2A34100F71381 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF09CC51AC2A4FC00F71381 /* SubViewController.swift in Sources */,
+				2CF09CA51AC2A34100F71381 /* ViewController.swift in Sources */,
+				2CF09CA31AC2A34100F71381 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF09CAE1AC2A34100F71381 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF09CB91AC2A34100F71381 /* mutliViewGestureControllTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CF09CB41AC2A34100F71381 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CF09C9C1AC2A34100F71381 /* mutliViewGestureControll */;
+			targetProxy = 2CF09CB31AC2A34100F71381 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CF09CA61AC2A34100F71381 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CF09CA71AC2A34100F71381 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CF09CAB1AC2A34100F71381 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CF09CAC1AC2A34100F71381 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CF09CBA1AC2A34100F71381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CF09CBB1AC2A34100F71381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CF09CBD1AC2A34100F71381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mutliViewGestureControll/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CF09CBE1AC2A34100F71381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = mutliViewGestureControll/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CF09CC01AC2A34100F71381 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = mutliViewGestureControllTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mutliViewGestureControll.app/mutliViewGestureControll";
+			};
+			name = Debug;
+		};
+		2CF09CC11AC2A34100F71381 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = mutliViewGestureControllTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mutliViewGestureControll.app/mutliViewGestureControll";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CF09C981AC2A34100F71381 /* Build configuration list for PBXProject "mutliViewGestureControll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF09CBA1AC2A34100F71381 /* Debug */,
+				2CF09CBB1AC2A34100F71381 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CF09CBC1AC2A34100F71381 /* Build configuration list for PBXNativeTarget "mutliViewGestureControll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF09CBD1AC2A34100F71381 /* Debug */,
+				2CF09CBE1AC2A34100F71381 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CF09CBF1AC2A34100F71381 /* Build configuration list for PBXNativeTarget "mutliViewGestureControllTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF09CC01AC2A34100F71381 /* Debug */,
+				2CF09CC11AC2A34100F71381 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CF09C951AC2A34100F71381 /* Project object */;
+}

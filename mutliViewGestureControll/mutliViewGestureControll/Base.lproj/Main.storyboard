@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mutliViewGestureControll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-1t-qyu">
+                                <rect key="frame" x="16" y="28" width="568" height="257"/>
+                                <connections>
+                                    <segue destination="P95-f8-bLx" kind="embed" id="kwH-zy-Vjr"/>
+                                </connections>
+                            </containerView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YT2-ov-DcF">
+                                <rect key="frame" x="16" y="321" width="568" height="259"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="YT2-ov-DcF" firstAttribute="top" secondItem="wEQ-1t-qyu" secondAttribute="bottom" constant="36" id="2ia-aj-2Ny"/>
+                            <constraint firstItem="wEQ-1t-qyu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IlD-mi-N0V"/>
+                            <constraint firstItem="wEQ-1t-qyu" firstAttribute="trailing" secondItem="YT2-ov-DcF" secondAttribute="trailing" id="SyY-uK-eX2"/>
+                            <constraint firstItem="wEQ-1t-qyu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Vxo-ip-J2t"/>
+                            <constraint firstAttribute="bottom" secondItem="YT2-ov-DcF" secondAttribute="bottom" constant="20" symbolic="YES" id="WKs-XG-yo0"/>
+                            <constraint firstItem="wEQ-1t-qyu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Wt3-RT-g9D"/>
+                            <constraint firstItem="wEQ-1t-qyu" firstAttribute="leading" secondItem="YT2-ov-DcF" secondAttribute="leading" id="atq-Ae-f5d"/>
+                            <constraint firstAttribute="bottom" secondItem="wEQ-1t-qyu" secondAttribute="bottom" constant="315" id="hTC-fs-du6"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5aR-29-we5" appends="YES" id="6wL-Yo-NeG"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="boxView" destination="YT2-ov-DcF" id="DIM-5l-jXR"/>
+                        <outlet property="containerView" destination="YT2-ov-DcF" id="UOH-Il-qTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="5aR-29-we5">
+                    <connections>
+                        <action selector="longPressAction:" destination="BYZ-38-t0r" id="CXp-Dl-ZNU"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="435" y="419"/>
+        </scene>
+        <!--Sub View Controller-->
+        <scene sceneID="EjJ-7a-czM">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="P95-f8-bLx" customClass="SubViewController" customModule="mutliViewGestureControll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oti-gW-Lxd"/>
+                        <viewControllerLayoutGuide type="bottom" id="91X-Wj-Odj"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="a6e-Lb-ofV">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="257"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ex-a8-wBc">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="257"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-3s-Tf6">
+                                        <rect key="frame" x="8" y="8" width="552" height="241"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beer cellar app icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-aE-1qj">
+                                                <rect key="frame" x="190" y="31" width="172" height="179"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="172" id="1aF-yx-YRR"/>
+                                                    <constraint firstAttribute="height" constant="179" id="SL2-iw-ID2"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="ahJ-aE-1qj" secondAttribute="centerX" id="0dP-Cu-WWw"/>
+                                            <constraint firstAttribute="centerY" secondItem="ahJ-aE-1qj" secondAttribute="centerY" id="X1e-re-rrT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dbd-3s-Tf6" firstAttribute="leading" secondItem="2ex-a8-wBc" secondAttribute="leadingMargin" id="LjR-gn-rAq"/>
+                                    <constraint firstItem="dbd-3s-Tf6" firstAttribute="top" secondItem="2ex-a8-wBc" secondAttribute="topMargin" id="LxY-tV-QYi"/>
+                                    <constraint firstAttribute="trailing" secondItem="dbd-3s-Tf6" secondAttribute="trailing" constant="8" id="Zuz-RN-w3o"/>
+                                    <constraint firstItem="dbd-3s-Tf6" firstAttribute="bottom" secondItem="2ex-a8-wBc" secondAttribute="bottomMargin" id="cYG-Q8-z7W"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2ex-a8-wBc" firstAttribute="bottom" secondItem="91X-Wj-Odj" secondAttribute="top" id="MjM-J3-1Dw"/>
+                            <constraint firstItem="2ex-a8-wBc" firstAttribute="top" secondItem="Oti-gW-Lxd" secondAttribute="bottom" id="aAI-ha-pjh"/>
+                            <constraint firstItem="2ex-a8-wBc" firstAttribute="leading" secondItem="a6e-Lb-ofV" secondAttribute="leading" id="anf-nL-M37"/>
+                            <constraint firstAttribute="trailing" secondItem="2ex-a8-wBc" secondAttribute="trailing" id="dqM-O9-Fds"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="imageView" destination="ahJ-aE-1qj" id="lYy-tw-7lh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OaV-Wv-ItD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="418.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Beer cellar app icon.png" width="800" height="600"/>
+    </resources>
+</document>

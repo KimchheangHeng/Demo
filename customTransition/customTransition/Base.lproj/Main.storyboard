@@ -121,6 +121,32 @@
             </objects>
             <point key="canvasLocation" x="1074" y="371"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="HSh-NA-pUP">
+            <objects>
+                <tableViewController id="YDF-aA-zZ4" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yIK-o0-uSF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DvA-a0-Svo">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DvA-a0-Svo" id="UMg-CV-31g">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YDF-aA-zZ4" id="1g0-ca-q2y"/>
+                            <outlet property="delegate" destination="YDF-aA-zZ4" id="3Gk-kg-5nA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Heo-bj-KyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718" y="458"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Epic.png" width="800" height="600"/>
