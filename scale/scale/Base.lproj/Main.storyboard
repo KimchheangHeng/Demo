@@ -90,6 +90,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="cDS-sT-2d8" id="bAN-jT-NrV"/>
                         <outlet property="subView" destination="6Wg-Da-LlB" id="EKS-xs-1VB"/>
                         <outletCollection property="Slider" destination="2Zu-Fn-oFY" collectionClass="NSMutableArray" id="KS9-sr-Fgz"/>
                     </connections>
