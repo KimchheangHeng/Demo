@@ -7,19 +7,56 @@
 //
 
 import UIKit
+import Snap
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    let normalLayout = NormalLayout()
+    let smallLayout = SmallLayout()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
   }
+    
+    @IBAction func PanAction(sender: UIPanGestureRecognizer) {
+        
+        switch sender.state {
+        case .Began:
+            collectionView.startInteractiveTransitionToCollectionViewLayout(smallLayout, completion: { (completed, finished) -> Void in
+                
+                
+            })
+            return
+        case .Changed:
+            let transitionLayout = collectionView.collectionViewLayout as TransitionLayout
+            transitionLayout.transitionProgress += 0.05
+            return
+        case .Cancelled, .Ended:
+            collectionView.cancelInteractiveTransition()
+            return
+            
+        default:
+            return
+        }
+    }
+}
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        return collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as UICollectionViewCell
+    }
+    
+    func collectionView(collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout! {
+        
+        return TransitionLayout(currentLayout: fromLayout, nextLayout:toLayout)
+    }
 }
 
