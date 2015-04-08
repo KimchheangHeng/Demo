@@ -8,7 +8,7 @@
 
 import UIKit
 
-func PopTransition(progress: Float, startValue: Float, endValue: Float) -> Float {
+func PopTransition(progress: CGFloat, startValue: CGFloat, endValue: CGFloat) -> CGFloat {
     return startValue + (progress * (endValue - startValue))
 }
 

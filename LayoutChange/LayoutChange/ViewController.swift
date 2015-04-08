@@ -20,22 +20,27 @@ class ViewController: UIViewController {
   }
     
     @IBAction func PanAction(sender: UIPanGestureRecognizer) {
-        
+      
+      let transition = sender.translationInView(view)
         switch sender.state {
         case .Began:
             collectionView.startInteractiveTransitionToCollectionViewLayout(smallLayout, completion: { (completed, finished) -> Void in
                 
-                
             })
             return
         case .Changed:
+          
+           let aprogress = transition.y / 300.0
+           let transitionPorgress = PopTransition(aprogress, 0, 1)
+          
             let transitionLayout = collectionView.collectionViewLayout as TransitionLayout
-            transitionLayout.transitionProgress += 0.05
+            let progress = transitionPorgress
+            transitionLayout.transitionProgress = progress >= 1.0 ? 1.0 : progress + 0.05
             return
         case .Cancelled, .Ended:
-            collectionView.cancelInteractiveTransition()
+            collectionView.finishInteractiveTransition()
             return
-            
+          
         default:
             return
         }
