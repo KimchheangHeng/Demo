@@ -18,6 +18,8 @@
 		2C7FA4991AD4271200EB1A5E /* SmallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FA4981AD4271200EB1A5E /* SmallLayout.swift */; };
 		2C7FA49B1AD4272B00EB1A5E /* TransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FA49A1AD4272B00EB1A5E /* TransitionLayout.swift */; };
 		2CADE8131AD4AF21008D07F6 /* MathSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE8121AD4AF21008D07F6 /* MathSpec.swift */; };
+		2CADE8151AD4B055008D07F6 /* DataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CADE8141AD4B055008D07F6 /* DataSourse.swift */; };
+		2CE7F4AA1AD4B36800D786C2 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE7F4A91AD4B36800D786C2 /* PageCell.swift */; };
 		EB32C01BA7AB3B69D6034B11 /* Pods_LayoutChange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D560010A6E7ADEDD193C3E6A /* Pods_LayoutChange.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		2C7FA4981AD4271200EB1A5E /* SmallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallLayout.swift; sourceTree = "<group>"; };
 		2C7FA49A1AD4272B00EB1A5E /* TransitionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionLayout.swift; sourceTree = "<group>"; };
 		2CADE8121AD4AF21008D07F6 /* MathSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathSpec.swift; sourceTree = "<group>"; };
+		2CADE8141AD4B055008D07F6 /* DataSourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourse.swift; sourceTree = "<group>"; };
+		2CE7F4A91AD4B36800D786C2 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		97A983FCA99EBCBD52D7C565 /* Pods-LayoutChange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayoutChange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LayoutChange/Pods-LayoutChange.debug.xcconfig"; sourceTree = "<group>"; };
 		D560010A6E7ADEDD193C3E6A /* Pods_LayoutChange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LayoutChange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,8 +98,10 @@
 		2C3CCDF21AD39226007C29EF /* LayoutChange */ = {
 			isa = PBXGroup;
 			children = (
+				2CE7F4A81AD4B34800D786C2 /* View */,
 				2C7FA4951AD426E600EB1A5E /* Layout */,
 				2C3CCE151AD39242007C29EF /* LayoutSpec.swift */,
+				2CADE8141AD4B055008D07F6 /* DataSourse.swift */,
 				2CADE8121AD4AF21008D07F6 /* MathSpec.swift */,
 				2C3CCDF51AD39226007C29EF /* AppDelegate.swift */,
 				2C3CCDF71AD39226007C29EF /* ViewController.swift */,
@@ -140,6 +146,14 @@
 				2C7FA49A1AD4272B00EB1A5E /* TransitionLayout.swift */,
 			);
 			name = Layout;
+			sourceTree = "<group>";
+		};
+		2CE7F4A81AD4B34800D786C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2CE7F4A91AD4B36800D786C2 /* PageCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		3456FC684D4966EFF3B9F715 /* Frameworks */ = {
@@ -315,7 +329,9 @@
 				2C3CCDF81AD39226007C29EF /* ViewController.swift in Sources */,
 				2C7FA4991AD4271200EB1A5E /* SmallLayout.swift in Sources */,
 				2C3CCDF61AD39226007C29EF /* AppDelegate.swift in Sources */,
+				2CE7F4AA1AD4B36800D786C2 /* PageCell.swift in Sources */,
 				2C7FA49B1AD4272B00EB1A5E /* TransitionLayout.swift in Sources */,
+				2CADE8151AD4B055008D07F6 /* DataSourse.swift in Sources */,
 				2C3CCE161AD39242007C29EF /* LayoutSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
