@@ -12,9 +12,19 @@ class ComponentView: UIView {
 
     var viewModel: ComponentViewModel! {
         didSet {
-            viewModel.frame.bindAndFire {
+            viewModel.center.bindAndFire {
                 [unowned self] in
-                self.frame = $0
+                self.center = $0
+            }
+            
+            viewModel.size.bindAndFire {
+                [unowned self] in
+                self.bounds.size = $0
+            }
+            
+            viewModel.rotation.bindAndFire {
+                [unowned self] in
+                self.transform = CGAffineTransformRotate(self.transform, $0)
             }
         }
     }

@@ -34,23 +34,29 @@ class Dynamic<T> {
 
 class ComponentViewModel: ComponentViewModelAttributes {
     let model: ComponentModel
-    let frame: Dynamic<CGRect>
+    let center: Dynamic<CGPoint>
+    let size: Dynamic<CGSize>
+    let rotation: Dynamic<CGFloat>
     
     init(model: ComponentModel) {
         self.model = model
-        frame = Dynamic(model.frame)
+        center = Dynamic(model.center)
+        size = Dynamic(model.size)
+        rotation = Dynamic(model.rotation)
     }
 }
 
 class MaskViewModel: MaskViewModelAttributes {
     let relateComponentViewModel: ComponentViewModel
-    let frame: Dynamic<CGRect>
-    let compoFrame: Dynamic<CGRect>
+    let center: Dynamic<CGPoint>
+    let size: Dynamic<CGSize>
+    let rotation: Dynamic<CGFloat>
     
     init(viewModel: ComponentViewModel) {
+        println("setupRotation = \(viewModel.rotation.value)")
         relateComponentViewModel = viewModel
-        let comFrame = viewModel.frame.value
-        frame = Dynamic(CGRectMake(comFrame.origin.x, comFrame.origin.y, comFrame.size.width + 15, comFrame.size.height + 15))
-        compoFrame = Dynamic(viewModel.frame.value)
+        center = Dynamic(viewModel.center.value)
+        size = Dynamic(viewModel.size.value)
+        rotation = Dynamic(viewModel.rotation.value)
     }
 }

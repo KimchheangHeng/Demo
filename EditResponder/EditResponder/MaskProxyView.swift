@@ -13,15 +13,22 @@ class MaskProxyView: UIView {
     var viewModel: MaskViewModel! {
         
         didSet {
-            viewModel.frame.bindAndFire {
+            viewModel.center.bindAndFire {
                 [unowned self] in
-                println($0)
-                self.frame = $0
+                self.center = $0
+                self.viewModel.relateComponentViewModel.center.value = $0
                 
             }
-            viewModel.compoFrame.bindAndFire {
+            viewModel.size.bindAndFire {
                 [unowned self] in
-                self.viewModel.relateComponentViewModel.frame.value = $0
+                self.bounds.size = $0
+                self.viewModel.relateComponentViewModel.size.value = $0
+            }
+            
+            viewModel.rotation.bindAndFire {
+                [unowned self] in
+                self.transform = CGAffineTransformRotate(self.transform, $0)
+                self.viewModel.relateComponentViewModel.rotation.value = $0
             }
         }
     }
@@ -51,40 +58,36 @@ class MaskProxyView: UIView {
     override func drawRect(rect: CGRect) {
         
         super.drawRect(rect)
-        drawCanvas1(frame: activeRegion[0] as CGRect)
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.redColor().CGColor
+//        drawCanvas1(frame: activeRegion[0] as CGRect)
     }
     
     func pan(sender: UIPanGestureRecognizer) {
         
-        let transition = sender.translationInView(self)
+        let transition = sender.translationInView(self.superview!)
         let location = sender.locationInView(self)
         
         if CGRectContainsPoint(scaleRegion, location) {
             
-            viewModel.frame.value.size.width += transition.x
-            viewModel.frame.value.size.height += transition.y
-            viewModel.compoFrame.value.size.width += transition.x
-            viewModel.compoFrame.value.size.height += transition.y
-            
-            let width = viewModel.frame.value.size.width
-            let height = viewModel.frame.value.size.height
-            let comWidth = width - 15.0
-            let comHeight = height - 15.0
-            
-            viewModel.frame.value.size.width = width <= 60.0 ? 60.0 : width
-            viewModel.frame.value.size.height = height <= 60.0 ? 60.0 : height
-            viewModel.compoFrame.value.size.width = width <= 60.0 ? 45.0 : comWidth
-            viewModel.compoFrame.value.size.height = height <= 60.0 ? 45.0 : comHeight
+            viewModel.size.value.width += transition.x
+            viewModel.size.value.height += transition.y
             
             setNeedsDisplay()
         } else {
-            viewModel.frame.value.origin.x += transition.x
-            viewModel.frame.value.origin.y += transition.y
-            viewModel.compoFrame.value.origin.x += transition.x
-            viewModel.compoFrame.value.origin.y += transition.y
+
+            viewModel.center.value.x += transition.x
+            viewModel.center.value.y += transition.y
         }
         
         sender.setTranslation(CGPointZero, inView: self)
+    }
+    
+    func rotation(sender: UIRotationGestureRecognizer) {
+        
+        viewModel.rotation.value = sender.rotation
+        sender.rotation = 0
+        setNeedsDisplay()
     }
     
 }
@@ -100,8 +103,9 @@ extension MaskProxyView {
     private func setupGesture() {
         self.backgroundColor = UIColor.clearColor()
         let pan = UIPanGestureRecognizer(target: self, action: "PanAction:")
+        let rotation = UIRotationGestureRecognizer(target: self, action: "RotationAction:")
         self.addGestureRecognizer(pan)
-        pan.delegate = self;
+        self.addGestureRecognizer(rotation)
     }
     
     private func drawCanvas1(#frame: CGRect) {
@@ -137,6 +141,10 @@ extension MaskProxyView {
     
     func PanAction(sender: UIPanGestureRecognizer) {
         pan(sender)
+    }
+    
+    func RotationAction(sender: UIRotationGestureRecognizer) {
+        rotation(sender)
     }
 }
 

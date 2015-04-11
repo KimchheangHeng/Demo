@@ -97,9 +97,12 @@ extension ViewController {
             var index = 0
             for viewModel in reverseCom {
                 index++
-                if CGRectContainsPoint(viewModel.frame.value, location) {
+                let center = viewModel.center.value
+                let size = viewModel.size.value
+                let rect = CGRectMake(center.x - size.width / 2.0, center.y - size.height / 2.0, size.width, size.height)
+                if CGRectContainsPoint(rect, location) {
                     activeMaskViewBy(viewModel)
-                    println("here!" + "\(index)" + "\(viewModel.frame.value)")
+
                     return
                 }
             }
@@ -120,12 +123,18 @@ extension ViewController {
         let location = sender.locationInView(self.view)
         
         let reverseCom = componentViewModels.reverse()
+        
+        println("com = " + "\(componentViewModels.last!.rotation.value)")
+        
         var index = 0
         for viewModel in reverseCom {
             index++
-            if CGRectContainsPoint(viewModel.frame.value, location) {
+            let center = viewModel.center.value
+            let size = viewModel.size.value
+            let rect = CGRectMake(center.x - size.width / 2.0, center.y - size.height / 2.0, size.width, size.height)
+            if CGRectContainsPoint(rect, location) {
                 activeMaskViewBy(viewModel)
-                println("here!" + "\(index)" + "\(viewModel.frame.value)")
+
                 return
             }
         }

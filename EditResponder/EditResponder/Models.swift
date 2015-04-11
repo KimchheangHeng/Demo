@@ -10,11 +10,15 @@ import UIKit
 
 class ComponentModel: NSObject {
     
-    var frame = CGRectZero
+    var center = CGPointZero
+    var size = CGSizeZero
+    var rotation: CGFloat = 0.0
     var color = UIColor.darkGrayColor()
     
-    init(frame aframe: CGRect, color aColor: UIColor) {
-        frame = aframe
+    init(center aCenter: CGPoint, size aSize: CGSize, color aColor: UIColor, rotation aRotation: CGFloat) {
+        center = aCenter
+        size = aSize
+        rotation = aRotation
         color = aColor
     }
 }

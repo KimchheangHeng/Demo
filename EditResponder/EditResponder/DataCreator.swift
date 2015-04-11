@@ -13,17 +13,19 @@ class DataCreator: NSObject {
     class func componentModels() -> [ComponentModel] {
         
         var array: [ComponentModel] = []
-        let number: Int = Int(arc4random() % 6 + 1)
+        let number: Int = Int(arc4random() % 1 + 1)
         
         for i in 0...number {
             
-            let x = arc4random() % 200
-            let y = arc4random() % 400 + 50
-            let width = arc4random() % 200 + 100
-            let height = arc4random() % 200 + 100
-            let frame = CGRectMake(CGFloat(x),CGFloat(y),CGFloat(width),CGFloat(height))
+            let x = CGFloat(arc4random() % 200)
+            let y = CGFloat(arc4random() % 400 + 50)
+            let width = CGFloat(arc4random() % 200 + 100)
+            let height = CGFloat(arc4random() % 200 + 100)
+            let center = CGPointMake(x + width / 2.0, y + height / 2.0)
+            let size = CGSizeMake(width, height)
+            let rotation: CGFloat = 0.0
             let color = UIColor(red: CGFloat((x % 255)) / 255.0, green: CGFloat((x % 255)) / 255.0, blue: CGFloat((x % 255))/255.0, alpha: 1.0)
-            let model = ComponentModel(frame: frame, color: color)
+            let model = ComponentModel(center: center, size: size, color: color, rotation: rotation)
             array.append(model)
         }
         return array

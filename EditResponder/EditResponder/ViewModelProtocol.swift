@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 protocol ComponentViewModelAttributes {
-    var frame: Dynamic<CGRect> { get }
+    var center: Dynamic<CGPoint>{ get }
+    var size: Dynamic<CGSize>{ get }
+    var rotation: Dynamic<CGFloat>{ get }
 }
 
 protocol MaskViewModelAttributes: ComponentViewModelAttributes {
-    var compoFrame: Dynamic<CGRect>{ get }
+//    var compoFrame: Dynamic<CGRect>{ get }
 }

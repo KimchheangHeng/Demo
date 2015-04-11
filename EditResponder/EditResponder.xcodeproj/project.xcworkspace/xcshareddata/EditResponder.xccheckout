@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B0B2AE85-6226-4BC3-980E-CFEC32F58DA5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>EditResponder</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>BF5BEB10263CD10D7F984D194A1A12A86F6DB684</key>
 		<string>https://github.com/cszwdy/Demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>EditResponder/EditResponder.xcodeproj/project.xcworkspace</string>
+	<string>EditResponder/EditResponder.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>BF5BEB10263CD10D7F984D194A1A12A86F6DB684</key>
