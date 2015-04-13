@@ -27,13 +27,15 @@ class MaskProxyView: UIView {
             
             viewModel.scale.bindAndFire {
                 [unowned self] in
-                self.transform = CGAffineTransformScale(self.transform, $0, $0)
+                let rotation = self.viewModel.rotation.value
+                self.scaleAndRotation($0, rotation: rotation)
                 self.viewModel.relateComponentViewModel.scale.value = $0
             }
             
             viewModel.rotation.bindAndFire {
                 [unowned self] in
-                self.transform = CGAffineTransformRotate(self.transform, $0)
+                let scale = self.viewModel.scale.value
+                self.scaleAndRotation(scale, rotation: $0)
                 self.viewModel.relateComponentViewModel.rotation.value = $0
             }
         }
@@ -98,9 +100,7 @@ class MaskProxyView: UIView {
         case .Began:
             beganRotaton = viewModel.rotation.value
         case .Changed:
-            viewModel.rotation.value = sender.rotation
-            sender.rotation = 0
-            
+            viewModel.rotation.value = beganRotaton + sender.rotation
         default:
             return
         }
@@ -110,23 +110,26 @@ class MaskProxyView: UIView {
         
         switch sender.state {
         case .Began:
-//            sender.scale = viewModel.scale.value
-            println("\(sender.scale)")
+            sender.scale = viewModel.scale.value
         case .Changed:
             viewModel.scale.value = sender.scale
-            sender.scale = 1
-
         default:
             return
         }
-        
-        println("\(sender.scale)")
     }
-    
 }
 
 // MASK - Private method
 extension MaskProxyView {
+    
+    private func scaleAndRotation(scale: CGFloat, rotation: CGFloat) {
+        
+        let scaleTransform = CGAffineTransformMakeScale(scale, scale)
+        let rotationTransform = CGAffineTransformMakeRotation(rotation)
+        let transform = CGAffineTransformConcat(scaleTransform, rotationTransform)
+        self.transform = transform
+        
+    }
     
     private func setupViewModelBy(viewModel: MaskViewModel) {
         self.viewModel = viewModel
@@ -138,6 +141,8 @@ extension MaskProxyView {
         let pan = UIPanGestureRecognizer(target: self, action: "PanAction:")
         let rotation = UIRotationGestureRecognizer(target: self, action: "RotationAction:")
         let pinch = UIPinchGestureRecognizer(target: self, action: "PinchAction:")
+        rotation.delegate = self
+        pinch.delegate = self
         self.addGestureRecognizer(pan)
         self.addGestureRecognizer(rotation)
         self.addGestureRecognizer(pinch)
@@ -194,6 +199,12 @@ extension MaskProxyView: UIGestureRecognizerDelegate {
         }
         return false
     }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    
     
     override func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
         

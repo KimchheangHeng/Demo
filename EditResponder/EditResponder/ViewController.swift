@@ -71,7 +71,7 @@ extension ViewController {
     }
     
     private func removeMaskView() {
-        
+        println("removeMaskView")
         if let theMaskView = maskView {
             theMaskView.removeFromSuperview()
             maskView = nil
@@ -89,37 +89,37 @@ extension ViewController {
     
     @IBAction func gobalPanAction(sender: UIPanGestureRecognizer) {
         
-        switch sender.state {
-        case .Began:
-            let location = sender.locationInView(self.view)
-            
-            let reverseCom = componentViewModels.reverse()
-            var index = 0
-            for viewModel in reverseCom {
-                index++
-                let center = viewModel.center.value
-                let size = viewModel.size.value
-                let rect = CGRectMake(center.x - size.width / 2.0, center.y - size.height / 2.0, size.width, size.height)
-                if CGRectContainsPoint(rect, location) {
-                    activeMaskViewBy(viewModel)
-
-                    return
-                }
-            }
-            removeMaskView()
-            
-        case .Changed:
-            if let aMaskView = maskView {
-                aMaskView.pan(sender)
-            }
-            
-        default:
-            return
-        }
+//        switch sender.state {
+//        case .Began:
+//            let location = sender.locationInView(self.view)
+//            
+//            let reverseCom = componentViewModels.reverse()
+//            var index = 0
+//            for viewModel in reverseCom {
+//                index++
+//                let center = viewModel.center.value
+//                let size = viewModel.size.value
+//                let rect = CGRectMake(center.x - size.width / 2.0, center.y - size.height / 2.0, size.width, size.height)
+//                if CGRectContainsPoint(rect, location) {
+//                    activeMaskViewBy(viewModel)
+//
+//                    return
+//                }
+//            }
+//            removeMaskView()
+//            
+//        case .Changed:
+//            if let aMaskView = maskView {
+//                aMaskView.pan(sender)
+//            }
+//            
+//        default:
+//            return
+//        }
     }
     
     @IBAction func TapAction(sender: UITapGestureRecognizer) {
-        //        println("TapAction");
+//                println("TapAction");
         let location = sender.locationInView(self.view)
         let reverseCom = componentViewModels.reverse()
         var index = 0
@@ -130,7 +130,7 @@ extension ViewController {
             let rect = CGRectMake(center.x - size.width / 2.0, center.y - size.height / 2.0, size.width, size.height)
             if CGRectContainsPoint(rect, location) {
                 
-                println("com = " + "\(viewModel.rotation.value)")
+//                println("com = " + "\(viewModel.rotation.value)")
                 activeMaskViewBy(viewModel)
 
                 return

@@ -24,12 +24,16 @@ class ComponentView: UIView {
             
             viewModel.scale.bindAndFire {
                 [unowned self] in
-                self.transform = CGAffineTransformScale(self.transform, $0, $0)
+                
+                let rotation = self.viewModel.rotation.value
+                self.scaleAndRotation($0, rotation: rotation)
+                
             }
             
             viewModel.rotation.bindAndFire {
                 [unowned self] in
-                self.transform = CGAffineTransformRotate(self.transform, $0)
+                let scale = self.viewModel.scale.value
+                self.scaleAndRotation(scale, rotation: $0)
             }
         }
     }
@@ -46,5 +50,14 @@ class ComponentView: UIView {
     func setupBy(viewModel: ComponentViewModel) {
         self.viewModel = viewModel
         self.backgroundColor = viewModel.model.color
+    }
+    
+    private func scaleAndRotation(scale: CGFloat, rotation: CGFloat) {
+        
+        let scaleTransform = CGAffineTransformMakeScale(scale, scale)
+        let rotationTransform = CGAffineTransformMakeRotation(rotation)
+        let transform = CGAffineTransformConcat(scaleTransform, rotationTransform)
+        self.transform = transform
+        
     }
 }

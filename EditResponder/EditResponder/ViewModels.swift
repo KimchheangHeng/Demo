@@ -56,7 +56,6 @@ class MaskViewModel: MaskViewModelAttributes {
     let rotation: Dynamic<CGFloat>
     
     init(viewModel: ComponentViewModel) {
-        println("setupRotation = \(viewModel.rotation.value)")
         relateComponentViewModel = viewModel
         center = Dynamic(viewModel.center.value)
         size = Dynamic(viewModel.size.value)
