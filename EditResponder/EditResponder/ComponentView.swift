@@ -22,6 +22,11 @@ class ComponentView: UIView {
                 self.bounds.size = $0
             }
             
+            viewModel.scale.bindAndFire {
+                [unowned self] in
+                self.transform = CGAffineTransformScale(self.transform, $0, $0)
+            }
+            
             viewModel.rotation.bindAndFire {
                 [unowned self] in
                 self.transform = CGAffineTransformRotate(self.transform, $0)

@@ -25,6 +25,12 @@ class MaskProxyView: UIView {
                 self.viewModel.relateComponentViewModel.size.value = $0
             }
             
+            viewModel.scale.bindAndFire {
+                [unowned self] in
+                self.transform = CGAffineTransformScale(self.transform, $0, $0)
+                self.viewModel.relateComponentViewModel.scale.value = $0
+            }
+            
             viewModel.rotation.bindAndFire {
                 [unowned self] in
                 self.transform = CGAffineTransformRotate(self.transform, $0)
@@ -32,6 +38,9 @@ class MaskProxyView: UIView {
             }
         }
     }
+    
+    var beganRotaton: CGFloat = 0
+    var beganScale: CGFloat = 0
     
     var activeRegion: [CGRect] {
         
@@ -85,9 +94,33 @@ class MaskProxyView: UIView {
     
     func rotation(sender: UIRotationGestureRecognizer) {
         
-        viewModel.rotation.value = sender.rotation
-        sender.rotation = 0
-        setNeedsDisplay()
+        switch sender.state {
+        case .Began:
+            beganRotaton = viewModel.rotation.value
+        case .Changed:
+            viewModel.rotation.value = sender.rotation
+            sender.rotation = 0
+            
+        default:
+            return
+        }
+    }
+    
+    func PinchAction(sender: UIPinchGestureRecognizer) {
+        
+        switch sender.state {
+        case .Began:
+//            sender.scale = viewModel.scale.value
+            println("\(sender.scale)")
+        case .Changed:
+            viewModel.scale.value = sender.scale
+            sender.scale = 1
+
+        default:
+            return
+        }
+        
+        println("\(sender.scale)")
     }
     
 }
@@ -104,8 +137,10 @@ extension MaskProxyView {
         self.backgroundColor = UIColor.clearColor()
         let pan = UIPanGestureRecognizer(target: self, action: "PanAction:")
         let rotation = UIRotationGestureRecognizer(target: self, action: "RotationAction:")
+        let pinch = UIPinchGestureRecognizer(target: self, action: "PinchAction:")
         self.addGestureRecognizer(pan)
         self.addGestureRecognizer(rotation)
+        self.addGestureRecognizer(pinch)
     }
     
     private func drawCanvas1(#frame: CGRect) {

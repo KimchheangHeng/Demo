@@ -12,6 +12,7 @@ import UIKit
 protocol ComponentViewModelAttributes {
     var center: Dynamic<CGPoint>{ get }
     var size: Dynamic<CGSize>{ get }
+    var scale: Dynamic<CGFloat>{ get }
     var rotation: Dynamic<CGFloat>{ get }
 }
 

@@ -121,11 +121,7 @@ extension ViewController {
     @IBAction func TapAction(sender: UITapGestureRecognizer) {
         //        println("TapAction");
         let location = sender.locationInView(self.view)
-        
         let reverseCom = componentViewModels.reverse()
-        
-        println("com = " + "\(componentViewModels.last!.rotation.value)")
-        
         var index = 0
         for viewModel in reverseCom {
             index++
@@ -133,6 +129,8 @@ extension ViewController {
             let size = viewModel.size.value
             let rect = CGRectMake(center.x - size.width / 2.0, center.y - size.height / 2.0, size.width, size.height)
             if CGRectContainsPoint(rect, location) {
+                
+                println("com = " + "\(viewModel.rotation.value)")
                 activeMaskViewBy(viewModel)
 
                 return

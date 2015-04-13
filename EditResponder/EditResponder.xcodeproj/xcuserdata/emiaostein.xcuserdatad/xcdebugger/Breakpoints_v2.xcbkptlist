@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EditResponder/MaskProxyView.swift"
-            timestampString = "450444405.898682"
+            timestampString = "450575374.971135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "rotation(_:)"
             landmarkType = "5">
          </BreakpointContent>

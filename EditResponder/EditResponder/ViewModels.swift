@@ -36,12 +36,14 @@ class ComponentViewModel: ComponentViewModelAttributes {
     let model: ComponentModel
     let center: Dynamic<CGPoint>
     let size: Dynamic<CGSize>
+    let scale: Dynamic<CGFloat>
     let rotation: Dynamic<CGFloat>
     
     init(model: ComponentModel) {
         self.model = model
         center = Dynamic(model.center)
         size = Dynamic(model.size)
+        scale = Dynamic(model.scale)
         rotation = Dynamic(model.rotation)
     }
 }
@@ -50,6 +52,7 @@ class MaskViewModel: MaskViewModelAttributes {
     let relateComponentViewModel: ComponentViewModel
     let center: Dynamic<CGPoint>
     let size: Dynamic<CGSize>
+    let scale: Dynamic<CGFloat>
     let rotation: Dynamic<CGFloat>
     
     init(viewModel: ComponentViewModel) {
@@ -57,6 +60,7 @@ class MaskViewModel: MaskViewModelAttributes {
         relateComponentViewModel = viewModel
         center = Dynamic(viewModel.center.value)
         size = Dynamic(viewModel.size.value)
+        scale = Dynamic(viewModel.scale.value)
         rotation = Dynamic(viewModel.rotation.value)
     }
 }

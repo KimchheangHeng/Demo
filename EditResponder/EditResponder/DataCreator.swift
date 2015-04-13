@@ -23,9 +23,10 @@ class DataCreator: NSObject {
             let height = CGFloat(arc4random() % 200 + 100)
             let center = CGPointMake(x + width / 2.0, y + height / 2.0)
             let size = CGSizeMake(width, height)
+            let scale: CGFloat = 1
             let rotation: CGFloat = 0.0
             let color = UIColor(red: CGFloat((x % 255)) / 255.0, green: CGFloat((x % 255)) / 255.0, blue: CGFloat((x % 255))/255.0, alpha: 1.0)
-            let model = ComponentModel(center: center, size: size, color: color, rotation: rotation)
+            let model = ComponentModel(center: center, size: size, sclae: scale, color: color, rotation: rotation)
             array.append(model)
         }
         return array
