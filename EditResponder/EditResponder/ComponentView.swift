@@ -50,6 +50,7 @@ class ComponentView: UIView {
     func setupBy(viewModel: ComponentViewModel) {
         self.viewModel = viewModel
         self.backgroundColor = viewModel.model.color
+
     }
     
     private func scaleAndRotation(scale: CGFloat, rotation: CGFloat) {

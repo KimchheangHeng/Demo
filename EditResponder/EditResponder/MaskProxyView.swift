@@ -41,6 +41,7 @@ class MaskProxyView: UIView {
         }
     }
     
+    var resize: Bool = false
     var beganRotaton: CGFloat = 0
     var beganScale: CGFloat = 0
     
@@ -52,7 +53,9 @@ class MaskProxyView: UIView {
     
     var scaleRegion: CGRect {
         
-        return CGRectOffset(bounds, CGRectGetWidth(bounds) - 50, CGRectGetHeight(bounds) - 50)
+        let scale = viewModel.scale.value
+        let region = CGRectMake(0, 0, CGRectGetWidth(bounds) * scale, CGRectGetHeight(bounds) * scale)
+        return CGRectOffset(region, region.width - 100, region.height - 100)
     }
     
     init(viewModel: MaskViewModel) {
@@ -69,8 +72,9 @@ class MaskProxyView: UIView {
     override func drawRect(rect: CGRect) {
         
         super.drawRect(rect)
-        self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.redColor().CGColor
+//        self.layer.borderWidth = 1
+//        self.layer.borderColor = UIColor.redColor().CGColor
+//        self.backgroundColor = UIColor.blueColor()
 //        drawCanvas1(frame: activeRegion[0] as CGRect)
     }
     
@@ -78,20 +82,37 @@ class MaskProxyView: UIView {
         
         let transition = sender.translationInView(self.superview!)
         let location = sender.locationInView(self)
+        println("location = \(location)")
         
-        if CGRectContainsPoint(scaleRegion, location) {
+        switch sender.state {
             
-            viewModel.size.value.width += transition.x
-            viewModel.size.value.height += transition.y
+        case .Began:
+            resize = CGRectContainsPoint(scaleRegion, location)
             
-            setNeedsDisplay()
-        } else {
-
-            viewModel.center.value.x += transition.x
-            viewModel.center.value.y += transition.y
+        case .Changed:
+            if resize {
+//                self.layer.anchorPoint = CGPointZero
+                let atransition = sender.translationInView(self)
+                let rotation = viewModel.rotation.value
+                viewModel.size.value.width += atransition.x
+                viewModel.size.value.height += atransition.y
+                viewModel.center.value.x += transition.x / 2.0
+                viewModel.center.value.y += transition.y / 2.0
+                
+                setNeedsDisplay()
+            } else {
+                let rotation = viewModel.rotation.value
+                viewModel.center.value.x += transition.x
+                viewModel.center.value.y += transition.y
+            }
+            
+//        case .Cancelled, .Ended:
+//            self.layer.anchorPoint = CGPointMake(0.5, 0.5)
+            
+        default:
+            return
         }
-        
-        sender.setTranslation(CGPointZero, inView: self)
+        sender.setTranslation(CGPointZero, inView: self.superview!)
     }
     
     func rotation(sender: UIRotationGestureRecognizer) {
@@ -133,7 +154,8 @@ extension MaskProxyView {
     
     private func setupViewModelBy(viewModel: MaskViewModel) {
         self.viewModel = viewModel
-        setNeedsDisplay()
+        self.backgroundColor = UIColor.blueColor()
+//        setNeedsDisplay()
     }
     
     private func setupGesture() {
@@ -145,7 +167,7 @@ extension MaskProxyView {
         pinch.delegate = self
         self.addGestureRecognizer(pan)
         self.addGestureRecognizer(rotation)
-        self.addGestureRecognizer(pinch)
+//        self.addGestureRecognizer(pinch)
     }
     
     private func drawCanvas1(#frame: CGRect) {

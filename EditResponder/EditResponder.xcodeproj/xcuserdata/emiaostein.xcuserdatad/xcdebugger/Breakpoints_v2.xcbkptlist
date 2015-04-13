@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EditResponder/MaskProxyView.swift"
-            timestampString = "450591104.761716"
+            timestampString = "450614069.022369"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "rotation(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -22,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EditResponder/MaskProxyView.swift"
-            timestampString = "450591104.761716"
+            timestampString = "450600025.008337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "pan(_:)"
             landmarkType = "5">
          </BreakpointContent>

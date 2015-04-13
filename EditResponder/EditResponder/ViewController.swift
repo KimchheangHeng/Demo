@@ -65,13 +65,13 @@ extension ViewController {
         
         let maskViewModel = MaskViewModel(viewModel: componentViewModel)
         maskView = MaskProxyView(viewModel: maskViewModel)
+        maskView.backgroundColor = UIColor.blueColor()
         if let theMaskView = maskView {
             view.addSubview(theMaskView)
         }
     }
     
     private func removeMaskView() {
-        println("removeMaskView")
         if let theMaskView = maskView {
             theMaskView.removeFromSuperview()
             maskView = nil

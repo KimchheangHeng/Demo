@@ -21,7 +21,7 @@ class DataCreator: NSObject {
             let y = CGFloat(arc4random() % 400 + 50)
             let width = CGFloat(arc4random() % 200 + 100)
             let height = CGFloat(arc4random() % 200 + 100)
-            let center = CGPointMake(x + width / 2.0, y + height / 2.0)
+            let center = CGPointMake(x, y)
             let size = CGSizeMake(width, height)
             let scale: CGFloat = 1
             let rotation: CGFloat = 0.0
