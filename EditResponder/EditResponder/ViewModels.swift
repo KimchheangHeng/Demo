@@ -32,7 +32,7 @@ class Dynamic<T> {
     }
 }
 
-class ComponentViewModel: ComponentViewModelAttributes {
+class ComponentViewModel:NSObject, ComponentViewModelAttributes {
     let model: ComponentModel
     let center: Dynamic<CGPoint>
     let size: Dynamic<CGSize>
@@ -48,7 +48,7 @@ class ComponentViewModel: ComponentViewModelAttributes {
     }
 }
 
-class MaskViewModel: MaskViewModelAttributes {
+class MaskViewModel:NSObject, MaskViewModelAttributes {
     let relateComponentViewModel: ComponentViewModel
     let center: Dynamic<CGPoint>
     let size: Dynamic<CGSize>

@@ -34,22 +34,24 @@
                             <constraint firstItem="9T6-SP-Em1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VcR-mk-P4M"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="oeW-yo-AsX" appends="YES" id="hXt-nD-JAP"/>
                             <outletCollection property="gestureRecognizers" destination="Q6n-Tw-RHj" appends="YES" id="ucF-fw-CrK"/>
+                            <outletCollection property="gestureRecognizers" destination="KcT-Vt-VZd" appends="YES" id="SCH-GI-pb2"/>
                         </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="oeW-yo-AsX">
-                    <connections>
-                        <action selector="gobalPanAction:" destination="BYZ-38-t0r" id="1JX-UU-dpR"/>
-                    </connections>
-                </panGestureRecognizer>
                 <tapGestureRecognizer id="Q6n-Tw-RHj">
                     <connections>
                         <action selector="TapAction:" destination="BYZ-38-t0r" id="mTR-0V-SfD"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Wc3-dy-TOg"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="KcT-Vt-VZd">
+                    <connections>
+                        <action selector="longPressAction:" destination="BYZ-38-t0r" id="OXr-Iy-UP1"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="N8E-U6-1nV"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="471" y="441"/>
         </scene>

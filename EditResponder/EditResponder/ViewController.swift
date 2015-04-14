@@ -10,7 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var aComponentViewModels: [ComponentViewModel] {
+    var componentViewModels: [ComponentViewModel] = []
+    var maskViewsModels: [MaskViewModel] = []
+    var componentViews: [ComponentView] = []
+    var maskViews: [MaskProxyView] = []
+    var mutliSelectable = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let acomponentViewModels = createComponentViewModels()
+        addComponents(acomponentViewModels)
+    }
+}
+
+// MARK: - Private Func
+extension ViewController {
+    
+    private func createComponentViewModels() -> [ComponentViewModel] {
         let models = DataCreator.componentModels()
         var viewModels: [ComponentViewModel] = []
         
@@ -22,64 +39,129 @@ class ViewController: UIViewController {
         return viewModels
     }
     
-    var componentViewModels: [ComponentViewModel] = []
-    var maskView: MaskProxyView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        componentViewModels = aComponentViewModels
-        setupComponents(componentViewModels)
-    }
-}
-
-// MARK: - Private Func 
-extension ViewController {
-    
-    private func setupComponents(viewModels: [ComponentViewModel]) {
+    private func addComponents(viewModels: [ComponentViewModel]) {
         for viewModel in viewModels {
-            let componentView = ComponentView(viewModel: viewModel)
-            view.addSubview(componentView)
+            addComponentBy(viewModel)
         }
+    }
+    
+    private func addComponentBy(componentViewModel: ComponentViewModel) {
+        
+        let componentView = ComponentView(viewModel: componentViewModel)
+        componentViewModels.append(componentViewModel)
+        componentViews.append(componentView)
+        view.addSubview(componentView)
+    }
+    
+    private func addMaskViewBy(componentViewModel: ComponentViewModel) {
+        
+        let maskViewModel = MaskViewModel(viewModel: componentViewModel)
+        let maskView = MaskProxyView(viewModel: maskViewModel)
+        maskView.backgroundColor = UIColor.blueColor()
+        maskViewsModels.append(maskViewModel)
+        maskViews.append(maskView)
+        view.addSubview(maskView)
+    }
+    
+    private func removeComponentBy(componentModel: ComponentModel) {
+        
+        for componentView in componentViews {
+            
+            if let viewmodel = componentView.viewModel {
+                if viewmodel == componentModel {
+                    maskViews.removeItem(componentView)
+                    componentView.removeFromSuperview()
+                    
+                    if componentViewModels.contain(componentModel) {
+                        componentViewModels.removeItem(componentModel)
+                    }
+                    break
+                }
+            }
+        }
+    }
+    
+    private func removeMaskBy(maskViewModel: MaskViewModel) {
+        
+        for maskView in maskViews {
+            
+            if let viewmodel = maskView.viewModel {
+                if viewmodel == maskViewModel {
+                    maskViews.removeItem(maskView)
+                    maskView.removeFromSuperview()
+                    
+                    if maskViewsModels.contain(maskViewModel) {
+                        maskViewsModels.removeItem(maskViewModel)
+                        
+                    }
+                    break
+                }
+            }
+        }
+    }
+    
+    private func removeComponentsAll() {
+        
+        for com in componentViews {
+            com.removeFromSuperview()
+        }
+        componentViews.removeAll(keepCapacity: false)
+        componentViewModels.removeAll(keepCapacity: false)
+    }
+    
+    private func removeMasksAll() {
+        
+        for mask in maskViews {
+            mask.removeFromSuperview()
+        }
+        maskViews.removeAll(keepCapacity: false)
+        maskViewsModels.removeAll(keepCapacity: false)
     }
     
     private func refresh() {
         
-        for subView in view.subviews {
-            if subView is ComponentView {
-                subView.removeFromSuperview()
+        removeComponentsAll()
+        removeMasksAll()
+        componentViewModels = createComponentViewModels()
+        addComponents(componentViewModels)
+    }
+    
+    private func inSpecialRegions(regionViewModels: [ComponentViewModel], regionViews: [ComponentView]) -> (Bool, Int) {
+        
+        for regionView in regionViews {
+            if let regionViewModel = regionView.viewModel {
+                
+                for (index, viewModel) in enumerate(regionViewModels) {
+                    
+                    if regionViewModel == viewModel  {
+                        return (true, index)
+                    }
+                }
             }
         }
-        componentViewModels.removeAll(keepCapacity: false)
-        componentViewModels = aComponentViewModels
-        setupComponents(componentViewModels)
-        removeMaskView()
-    }
-    
-    private func activeMaskViewBy(componentViewModel: ComponentViewModel) {
-        removeMaskView()
-        setupMaskViewBy(componentViewModel)
-    }
-    
-    private func setupMaskViewBy(componentViewModel: ComponentViewModel) {
         
-        let maskViewModel = MaskViewModel(viewModel: componentViewModel)
-        maskView = MaskProxyView(viewModel: maskViewModel)
-        maskView.backgroundColor = UIColor.blueColor()
-        if let theMaskView = maskView {
-            view.addSubview(theMaskView)
-        }
+        return (false, intmax_t())
     }
     
-    private func removeMaskView() {
-        if let theMaskView = maskView {
-            theMaskView.removeFromSuperview()
-            maskView = nil
+    private func inMaskSpecialRegions(regionViewModels: [MaskViewModel], regionViews: [MaskProxyView]) -> (Bool, Int) {
+        
+        for regionView in regionViews {
+            if let regionViewModel = regionView.viewModel {
+                
+                for (index, viewModel) in enumerate(regionViewModels) {
+                    
+                    if regionViewModel == viewModel  {
+                        return (true, index)
+                    }
+                }
+            }
         }
+        
+        return (false, intmax_t())
     }
 }
 
-// IBAction
+// MARK - IBAction
 extension ViewController {
     
     
@@ -87,58 +169,173 @@ extension ViewController {
         refresh()
     }
     
-    @IBAction func gobalPanAction(sender: UIPanGestureRecognizer) {
+    @IBAction func longPressAction(sender: UILongPressGestureRecognizer) {
         
-//        switch sender.state {
-//        case .Began:
-//            let location = sender.locationInView(self.view)
-//            
-//            let reverseCom = componentViewModels.reverse()
-//            var index = 0
-//            for viewModel in reverseCom {
-//                index++
-//                let center = viewModel.center.value
-//                let size = viewModel.size.value
-//                let rect = CGRectMake(center.x - size.width / 2.0, center.y - size.height / 2.0, size.width, size.height)
-//                if CGRectContainsPoint(rect, location) {
-//                    activeMaskViewBy(viewModel)
-//
-//                    return
-//                }
-//            }
-//            removeMaskView()
-//            
-//        case .Changed:
-//            if let aMaskView = maskView {
-//                aMaskView.pan(sender)
-//            }
-//            
-//        default:
-//            return
-//        }
+                let location = sender.locationInView(view)
+        
+                switch sender.state {
+                case .Began:
+                    let InmaskViews = maskViews.filter({ (spectialView) -> Bool in
+                        let convertPoint = self.view.convertPoint(location, toView: spectialView)
+                        return CGRectContainsPoint(spectialView.bounds, convertPoint)
+                    })
+                    
+                    let reveMaskViews = InmaskViews.reverse()
+                    let reveMM = maskViewsModels.reverse()
+                    
+                    let result: (Bool, Int) = inMaskSpecialRegions(reveMM, regionViews: reveMaskViews)
+                    if result.0 == true {
+                        mutliSelectable = true
+                        return
+                    }
+                    
+                    let InComViews = componentViews.filter({ (spectialView) -> Bool in
+                        let convertPoint = self.view.convertPoint(location, toView: spectialView)
+                        return CGRectContainsPoint(spectialView.bounds, convertPoint)
+                    })
+                    
+                    let reveComViews = InComViews.reverse()
+                    let reveComM = componentViewModels.reverse()
+                    
+                    let aresult: (Bool, Int) = inSpecialRegions(reveComM, regionViews: reveComViews)
+                    if aresult.0 == true {
+                        addMaskViewBy(reveComM[aresult.1])
+                        mutliSelectable = true
+                        return
+                    }
+                    
+                    mutliSelectable = false
+                    return
+                    
+        
+                case .Ended, .Cancelled:
+                    println("longpressEnd")
+                    mutliSelectable = false
+        
+                default:
+                    return
+                }
     }
     
     @IBAction func TapAction(sender: UITapGestureRecognizer) {
-//                println("TapAction");
-        let location = sender.locationInView(self.view)
-        let reverseCom = componentViewModels.reverse()
-        var index = 0
-        for viewModel in reverseCom {
-            index++
-            let center = viewModel.center.value
-            let size = viewModel.size.value
-            let rect = CGRectMake(center.x - size.width / 2.0, center.y - size.height / 2.0, size.width, size.height)
-            if CGRectContainsPoint(rect, location) {
-                
-//                println("com = " + "\(viewModel.rotation.value)")
-                activeMaskViewBy(viewModel)
-
+        
+        let location = sender.locationInView(view)
+        
+        if mutliSelectable {
+            
+            let InmaskViews = maskViews.filter({ (spectialView) -> Bool in
+                let convertPoint = self.view.convertPoint(location, toView: spectialView)
+                return CGRectContainsPoint(spectialView.bounds, convertPoint)
+            })
+            
+            let reveMaskViews = InmaskViews.reverse()
+            let reveMM = maskViewsModels.reverse()
+            
+            let result: (Bool, Int) = inMaskSpecialRegions(reveMM, regionViews: reveMaskViews)
+            if result.0 == true {
+                removeMaskBy(maskViewsModels[result.1])
                 return
             }
+            
+            let InComViews = componentViews.filter({ (spectialView) -> Bool in
+                let convertPoint = self.view.convertPoint(location, toView: spectialView)
+                return CGRectContainsPoint(spectialView.bounds, convertPoint)
+            })
+            
+            let reveComViews = InComViews.reverse()
+            let reveComM = componentViewModels.reverse()
+            
+            let aresult: (Bool, Int) = inSpecialRegions(reveComM, regionViews: reveComViews)
+            if aresult.0 == true {
+                addMaskViewBy(componentViewModels[result.1])
+                return
+            }
+            
+            
+            return
+            
+            
+        } else {
+            
+            Incomponents(location)
+            
         }
-        removeMaskView()
+    }
+    
+    private func Incomponents(location: CGPoint) {
+        
+        let InComViews = componentViews.filter({ (componentView) -> Bool in
+            let convertPoint = self.view.convertPoint(location, toView: componentView)
+            return CGRectContainsPoint(componentView.bounds, convertPoint)
+        })
+        
+        if InComViews.count <= 0 {
+            removeMasksAll()
+            return
+        }
+        
+        let reve = InComViews.reverse()
+        let revem = componentViewModels.reverse()
+        let result: (Bool, Int) = inSpecialRegions(revem, regionViews: reve)
+        if result.0 == true {
+            removeMasksAll()
+            addMaskViewBy(revem[result.1])
+            return
+        }
+        
+        removeMasksAll()
+        return
         
     }
 }
+
+extension ViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        return true
+    }
+    
+}
+
+extension Array {
+    mutating func removeItem<T: Equatable>(item: T) -> Bool {
+        var index: Int?
+        for (idx, objectToCompare) in enumerate(self) {
+            if let to = objectToCompare as? T {
+                if item == to {
+                    index = idx
+                }
+            }
+        }
+        
+        if(index != nil) {
+            self.removeAtIndex(index!)
+            return true
+        }
+        
+        return false
+    }
+    
+    func contain<T: Equatable>(item: T) -> Bool {
+        var index: Int?
+        for (idx, objectToCompare) in enumerate(self) {
+            if let to = objectToCompare as? T {
+                if item == to {
+                    index = idx
+                }
+            }
+        }
+        
+        if(index != nil) {
+            
+            return true
+        }
+        
+        return false
+    }
+}
+
+
 
 

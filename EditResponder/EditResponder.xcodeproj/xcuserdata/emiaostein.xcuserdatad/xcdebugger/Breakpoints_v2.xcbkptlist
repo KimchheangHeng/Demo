@@ -4,19 +4,13 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EditResponder/MaskProxyView.swift"
-            timestampString = "450614069.022369"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "rotation(_:)"
-            landmarkType = "5">
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -25,14 +19,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EditResponder/MaskProxyView.swift"
-            timestampString = "450600025.008337"
+            filePath = "EditResponder/ViewController.swift"
+            timestampString = "450713562.804678"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "pan(_:)"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "TapAction(_:)"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EditResponder.ViewController.TapAction (EditResponder.ViewController)(ObjectiveC.UITapGestureRecognizer) -&gt; ()"
+                  moduleName = "EditResponder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiaostein/GitHub/Demo/EditResponder/EditResponder/ViewController.swift"
+                  timestampString = "450713590.384923"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EditResponder.ViewController.(TapAction (EditResponder.ViewController) -&gt; (ObjectiveC.UITapGestureRecognizer) -&gt; ()).(closure #1)"
+                  moduleName = "EditResponder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiaostein/GitHub/Demo/EditResponder/EditResponder/ViewController.swift"
+                  timestampString = "450713590.385216"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "227"
+                  endingLineNumber = "227"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

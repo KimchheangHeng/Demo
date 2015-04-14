@@ -13,6 +13,7 @@ class MaskProxyView: UIView {
     var viewModel: MaskViewModel! {
         
         didSet {
+            
             viewModel.center.bindAndFire {
                 [unowned self] in
                 self.center = $0
