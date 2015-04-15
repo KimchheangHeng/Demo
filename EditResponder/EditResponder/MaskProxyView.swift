@@ -45,13 +45,11 @@ class MaskProxyView: UIView {
     var resize: Bool = false
     var beganRotaton: CGFloat = 0
     var beganScale: CGFloat = 0
-    
     var activeRegion: [CGRect] {
         
         let rect = CGRectOffset(bounds, 0, 0)
         return [rect]
     }
-    
     var scaleRegion: CGRect {
         
         let scale = viewModel.scale.value
@@ -61,6 +59,7 @@ class MaskProxyView: UIView {
     
     init(viewModel: MaskViewModel) {
         super.init(frame: CGRectZero)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "movingAction:", name: "moving", object: nil)
         setupViewModelBy(viewModel)
         setupGesture()
     }
@@ -69,12 +68,15 @@ class MaskProxyView: UIView {
         super.init(coder: aDecoder)
     }
     
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "moving", object: nil)
+    }
     
     override func drawRect(rect: CGRect) {
         
         super.drawRect(rect)
-//        self.layer.borderWidth = 1
-//        self.layer.borderColor = UIColor.redColor().CGColor
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.redColor().CGColor
 //        self.backgroundColor = UIColor.blueColor()
 //        drawCanvas1(frame: activeRegion[0] as CGRect)
     }
@@ -83,7 +85,6 @@ class MaskProxyView: UIView {
         
         let transition = sender.translationInView(self.superview!)
         let location = sender.locationInView(self)
-        println("location = \(location)")
         
         switch sender.state {
             
@@ -92,7 +93,6 @@ class MaskProxyView: UIView {
             
         case .Changed:
             if resize {
-//                self.layer.anchorPoint = CGPointZero
                 let atransition = sender.translationInView(self)
                 let rotation = viewModel.rotation.value
                 viewModel.size.value.width += atransition.x
@@ -100,15 +100,11 @@ class MaskProxyView: UIView {
                 viewModel.center.value.x += transition.x / 2.0
                 viewModel.center.value.y += transition.y / 2.0
                 
-                setNeedsDisplay()
             } else {
-                let rotation = viewModel.rotation.value
-                viewModel.center.value.x += transition.x
-                viewModel.center.value.y += transition.y
+//                viewModel.center.value.x += transition.x
+//                viewModel.center.value.y += transition.y
+                NSNotificationCenter.defaultCenter().postNotificationName("moving", object: ["x": transition.x, "y": transition.y])
             }
-            
-//        case .Cancelled, .Ended:
-//            self.layer.anchorPoint = CGPointMake(0.5, 0.5)
             
         default:
             return
@@ -143,6 +139,17 @@ class MaskProxyView: UIView {
 
 // MASK - Private method
 extension MaskProxyView {
+    
+       func movingAction(notifiction: NSNotification) {
+        if let transition = notifiction.object as? NSDictionary {
+            
+            let x = transition["x"] as! CGFloat
+            let y = transition["y"] as! CGFloat
+            viewModel.center.value.x += x
+            viewModel.center.value.y += y
+            
+        }
+    }
     
     private func scaleAndRotation(scale: CGFloat, rotation: CGFloat) {
         

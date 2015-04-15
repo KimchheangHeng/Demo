@@ -57,7 +57,6 @@ extension ViewController {
         
         let maskViewModel = MaskViewModel(viewModel: componentViewModel)
         let maskView = MaskProxyView(viewModel: maskViewModel)
-        maskView.backgroundColor = UIColor.blueColor()
         maskViewsModels.append(maskViewModel)
         maskViews.append(maskView)
         view.addSubview(maskView)
@@ -175,16 +174,13 @@ extension ViewController {
         
                 switch sender.state {
                 case .Began:
+                    println("longPress began")
                     let InmaskViews = maskViews.filter({ (spectialView) -> Bool in
                         let convertPoint = self.view.convertPoint(location, toView: spectialView)
                         return CGRectContainsPoint(spectialView.bounds, convertPoint)
                     })
                     
-                    let reveMaskViews = InmaskViews.reverse()
-                    let reveMM = maskViewsModels.reverse()
-                    
-                    let result: (Bool, Int) = inMaskSpecialRegions(reveMM, regionViews: reveMaskViews)
-                    if result.0 == true {
+                    if let reveMaskViews = InmaskViews.last {
                         mutliSelectable = true
                         return
                     }
@@ -194,12 +190,8 @@ extension ViewController {
                         return CGRectContainsPoint(spectialView.bounds, convertPoint)
                     })
                     
-                    let reveComViews = InComViews.reverse()
-                    let reveComM = componentViewModels.reverse()
-                    
-                    let aresult: (Bool, Int) = inSpecialRegions(reveComM, regionViews: reveComViews)
-                    if aresult.0 == true {
-                        addMaskViewBy(reveComM[aresult.1])
+                    if let reveComViews = InComViews.last {
+                        addMaskViewBy(reveComViews.viewModel)
                         mutliSelectable = true
                         return
                     }
@@ -219,6 +211,7 @@ extension ViewController {
     
     @IBAction func TapAction(sender: UITapGestureRecognizer) {
         
+        println("TapAction")
         let location = sender.locationInView(view)
         
         if mutliSelectable {
@@ -228,29 +221,20 @@ extension ViewController {
                 return CGRectContainsPoint(spectialView.bounds, convertPoint)
             })
             
-            let reveMaskViews = InmaskViews.reverse()
-            let reveMM = maskViewsModels.reverse()
-            
-            let result: (Bool, Int) = inMaskSpecialRegions(reveMM, regionViews: reveMaskViews)
-            if result.0 == true {
-                removeMaskBy(maskViewsModels[result.1])
+            if let reveMaskViews = InmaskViews.last {
+                removeMaskBy(reveMaskViews.viewModel)
                 return
             }
             
-            let InComViews = componentViews.filter({ (spectialView) -> Bool in
+            let inRegionView = componentViews.filter({ (spectialView) -> Bool in
                 let convertPoint = self.view.convertPoint(location, toView: spectialView)
                 return CGRectContainsPoint(spectialView.bounds, convertPoint)
             })
             
-            let reveComViews = InComViews.reverse()
-            let reveComM = componentViewModels.reverse()
-            
-            let aresult: (Bool, Int) = inSpecialRegions(reveComM, regionViews: reveComViews)
-            if aresult.0 == true {
-                addMaskViewBy(componentViewModels[result.1])
+            if let selectedView = inRegionView.last {
+                addMaskViewBy(selectedView.viewModel)
                 return
             }
-            
             
             return
             
@@ -274,18 +258,14 @@ extension ViewController {
             return
         }
         
-        let reve = InComViews.reverse()
-        let revem = componentViewModels.reverse()
-        let result: (Bool, Int) = inSpecialRegions(revem, regionViews: reve)
-        if result.0 == true {
-            removeMasksAll()
-            addMaskViewBy(revem[result.1])
-            return
-        }
+        if let selectedComView = InComViews.last {
+                removeMasksAll()
+                addMaskViewBy(selectedComView.viewModel)
+                return
+            }
         
         removeMasksAll()
         return
-        
     }
 }
 
