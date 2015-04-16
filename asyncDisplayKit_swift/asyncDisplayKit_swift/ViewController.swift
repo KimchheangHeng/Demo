@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     let queue = NSOperationQueue()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        cellVMs = dataCreator.createCellViewModels(10)
+        collectionView.decelerationRate = 0.1
+        cellVMs = dataCreator.createCellViewModels(100)
     }
 }
 

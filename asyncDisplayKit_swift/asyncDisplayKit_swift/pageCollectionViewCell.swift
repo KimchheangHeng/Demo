@@ -11,6 +11,7 @@ import UIKit
 class pageCollectionViewCell: UICollectionViewCell {
     
     var containerNode: ASDisplayNode?
+    var containerNodeView: UIView?
     var nodeConstructionOperation: NSOperation?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +22,11 @@ class pageCollectionViewCell: UICollectionViewCell {
         if let operation = nodeConstructionOperation {
             operation.cancel()
         }
+        
+        containerNode?.recursivelySetDisplaySuspended(true)
+        containerNodeView?.removeFromSuperview()
+        containerNodeView = nil
+        containerNode = nil
     }
     
     func configCell(cellVM: cellViewModel, queue: NSOperationQueue) {
@@ -48,18 +54,12 @@ extension pageCollectionViewCell {
             }
             
             if let strongSelf = self {
+
+               let aContaierNode = strongSelf.renderNodesBy(cellVM)
                 
-                NSThread.sleepForTimeInterval(1)
-                println("1 /n")
                 if operation.cancelled {
                     return
                 }
-                NSThread.sleepForTimeInterval(3)
-                println("2 /n")
-                if operation.cancelled {
-                    return
-                }
-                
                 dispatch_async(dispatch_get_main_queue(), { [weak operation] in
                     if let strongOperation = operation{
                         if strongOperation.cancelled{
@@ -70,12 +70,41 @@ extension pageCollectionViewCell {
                             return
                         }
                         
+                        if aContaierNode.displaySuspended {
+                            return
+                        }
+                        
+                        strongSelf.contentView.addSubview(aContaierNode.view)
+                        aContaierNode.setNeedsDisplay()
+                        strongSelf.containerNodeView = aContaierNode.view
+                        strongSelf.containerNode = aContaierNode
                         println("end")
                     }
-                    
                 })
             }
         }
         return operation
+    }
+    
+    private func renderNodesBy(cellVM: cellViewModel) -> ASDisplayNode {
+        
+        let aContainerNode = ASDisplayNode()
+        aContainerNode.layerBacked = false
+        
+        for itemVM in cellVM.itemVMs {
+            
+            let node = ASImageNode()
+            node.layerBacked = false
+            node.frame.origin.x = itemVM.center.x - itemVM.size.width / 2.0
+            node.frame.origin.y = itemVM.center.y - itemVM.size.height / 2.0
+            node.bounds.size = itemVM.size
+            let image = UIImage(named: "Cycling Tours.jpeg")
+            node.image = image
+//            node.transform = CATransform3DMakeRotation(itemVM.rotation, 0, 0, 1)
+            node.backgroundColor = UIColor(red: CGFloat(Double(itemVM.size.width % 255) / 255.0), green: CGFloat(Double(itemVM.size.width) / 255.0), blue: CGFloat(Double(itemVM.size.width) / 255.0), alpha: 1)
+            aContainerNode.addSubnode(node)
+        }
+        
+        return aContainerNode
     }
 }

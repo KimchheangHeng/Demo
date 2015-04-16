@@ -27,7 +27,7 @@ class itemViewModel: viewModel {
 class cellViewModel: viewModel {
     var itemVMs: [itemViewModel] = []
     override init() {
-        itemVMs = dataCreator.createItemViewModels(30)
+        itemVMs = dataCreator.createItemViewModels(50)
     }
 }
 

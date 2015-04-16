@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C19DEC71ADE386F00B56AE2 /* libAsyncDisplayKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C19DEC61ADE386F00B56AE2 /* libAsyncDisplayKit.a */; };
 		2C1AF1591ADE545E00ACFB44 /* GCD_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1AF1581ADE545E00ACFB44 /* GCD_extension.swift */; };
+		2C81FA311ADF653A00EB77B8 /* Cycling Tours.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C81FA301ADF653A00EB77B8 /* Cycling Tours.jpeg */; };
+		2C81FA331ADF692A00EB77B8 /* PageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81FA321ADF692A00EB77B8 /* PageLayout.swift */; };
 		2C827E7F1ADE3571000FCDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C827E7E1ADE3571000FCDE5 /* AppDelegate.swift */; };
 		2C827E811ADE3571000FCDE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C827E801ADE3571000FCDE5 /* ViewController.swift */; };
 		2C827E841ADE3571000FCDE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C827E821ADE3571000FCDE5 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		2C19DEC61ADE386F00B56AE2 /* libAsyncDisplayKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAsyncDisplayKit.a; path = "ASync/build/Debug-iphoneos/libAsyncDisplayKit.a"; sourceTree = "<group>"; };
 		2C1AF1581ADE545E00ACFB44 /* GCD_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD_extension.swift; sourceTree = "<group>"; };
+		2C81FA301ADF653A00EB77B8 /* Cycling Tours.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Cycling Tours.jpeg"; sourceTree = "<group>"; };
+		2C81FA321ADF692A00EB77B8 /* PageLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageLayout.swift; sourceTree = "<group>"; };
 		2C827E791ADE3571000FCDE5 /* asyncDisplayKit_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asyncDisplayKit_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C827E7D1ADE3571000FCDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C827E7E1ADE3571000FCDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,10 +98,12 @@
 		2C827E7B1ADE3571000FCDE5 /* asyncDisplayKit_swift */ = {
 			isa = PBXGroup;
 			children = (
+				2C81FA301ADF653A00EB77B8 /* Cycling Tours.jpeg */,
 				2C1AF1581ADE545E00ACFB44 /* GCD_extension.swift */,
 				2C827E9E1ADE35D7000FCDE5 /* viewModels.swift */,
 				2C827E7E1ADE3571000FCDE5 /* AppDelegate.swift */,
 				2C827E801ADE3571000FCDE5 /* ViewController.swift */,
+				2C81FA321ADF692A00EB77B8 /* PageLayout.swift */,
 				2C827EA01ADE35E8000FCDE5 /* pageCollectionViewCell.swift */,
 				2C827E821ADE3571000FCDE5 /* Main.storyboard */,
 				2C827E851ADE3571000FCDE5 /* Images.xcassets */,
@@ -223,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C81FA311ADF653A00EB77B8 /* Cycling Tours.jpeg in Resources */,
 				2C827E841ADE3571000FCDE5 /* Main.storyboard in Resources */,
 				2C827E891ADE3571000FCDE5 /* LaunchScreen.xib in Resources */,
 				2C827E861ADE3571000FCDE5 /* Images.xcassets in Resources */,
@@ -243,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C81FA331ADF692A00EB77B8 /* PageLayout.swift in Sources */,
 				2C827E811ADE3571000FCDE5 /* ViewController.swift in Sources */,
 				2C827E7F1ADE3571000FCDE5 /* AppDelegate.swift in Sources */,
 				2C827E9F1ADE35D7000FCDE5 /* viewModels.swift in Sources */,
@@ -377,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG YONGQUAN (5797F57Q2L)";
 				INFOPLIST_FILE = asyncDisplayKit_swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -389,6 +398,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bb4acdc6-8045-4629-92db-37fe0263bd14";
 				SWIFT_OBJC_BRIDGING_HEADER = "asyncDisplayKit_swift/asyncDisplayKit_swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -399,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ZHANG YONGQUAN (5797F57Q2L)";
 				INFOPLIST_FILE = asyncDisplayKit_swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -411,6 +422,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bb4acdc6-8045-4629-92db-37fe0263bd14";
 				SWIFT_OBJC_BRIDGING_HEADER = "asyncDisplayKit_swift/asyncDisplayKit_swift-Bridging-Header.h";
 			};
 			name = Release;
