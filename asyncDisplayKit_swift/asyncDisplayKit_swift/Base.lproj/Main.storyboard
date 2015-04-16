@@ -38,18 +38,35 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="v8f-4h-Swy" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="1wD-WW-wiW"/>
                             <constraint firstAttribute="trailing" secondItem="v8f-4h-Swy" secondAttribute="trailing" id="9fq-9i-AmT"/>
                             <constraint firstItem="v8f-4h-Swy" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="VL4-Td-sQz"/>
                             <constraint firstItem="v8f-4h-Swy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="oh0-d3-uAY"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="A46-Ob-VpO" appends="YES" id="OG1-78-dyx"/>
+                            <outletCollection property="gestureRecognizers" destination="dj2-RU-Uc8" appends="YES" id="Ioe-IX-Dfg"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="v8f-4h-Swy" id="VTv-OO-ELe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="A46-Ob-VpO">
+                    <connections>
+                        <action selector="longPressAction:" destination="vXZ-lx-hvc" id="s6A-BD-bYh"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="1Oj-BP-TPg"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="dj2-RU-Uc8">
+                    <connections>
+                        <action selector="tapAction:" destination="vXZ-lx-hvc" id="XMT-Oo-77z"/>
+                        <outlet property="delegate" destination="vXZ-lx-hvc" id="XXj-Yg-8JW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="342" y="381"/>
         </scene>
