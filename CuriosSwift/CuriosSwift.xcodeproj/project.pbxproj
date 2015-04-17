@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C540B111AE102FE008C9804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C540B101AE102FE008C9804 /* AppDelegate.swift */; };
+		2C540B131AE102FE008C9804 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C540B121AE102FE008C9804 /* ViewController.swift */; };
+		2C540B161AE102FE008C9804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C540B141AE102FE008C9804 /* Main.storyboard */; };
+		2C540B181AE102FE008C9804 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C540B171AE102FE008C9804 /* Images.xcassets */; };
+		2C540B1B1AE102FE008C9804 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C540B191AE102FE008C9804 /* LaunchScreen.xib */; };
+		2C540B271AE102FF008C9804 /* CuriosSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C540B261AE102FF008C9804 /* CuriosSwiftTests.swift */; };
+		462003900340460DEB6BA4B1 /* Pods_CuriosSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B53102C0702653FDA67CCC /* Pods_CuriosSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C540B211AE102FF008C9804 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C540B031AE102FE008C9804 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C540B0A1AE102FE008C9804;
+			remoteInfo = CuriosSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C540B0B1AE102FE008C9804 /* CuriosSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CuriosSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C540B0F1AE102FE008C9804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C540B101AE102FE008C9804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2C540B121AE102FE008C9804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C540B151AE102FE008C9804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C540B171AE102FE008C9804 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2C540B1A1AE102FE008C9804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		2C540B201AE102FF008C9804 /* CuriosSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuriosSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C540B251AE102FF008C9804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C540B261AE102FF008C9804 /* CuriosSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriosSwiftTests.swift; sourceTree = "<group>"; };
+		51B53102C0702653FDA67CCC /* Pods_CuriosSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuriosSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8FCD5C8B131B34F6D00A66 /* Pods-CuriosSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuriosSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-CuriosSwift/Pods-CuriosSwift.release.xcconfig"; sourceTree = "<group>"; };
+		9A0276C97DCB62C1BC189B9D /* Pods-CuriosSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuriosSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CuriosSwift/Pods-CuriosSwift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C540B081AE102FE008C9804 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462003900340460DEB6BA4B1 /* Pods_CuriosSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C540B1D1AE102FF008C9804 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C540B021AE102FE008C9804 = {
+			isa = PBXGroup;
+			children = (
+				2C540B0D1AE102FE008C9804 /* CuriosSwift */,
+				2C540B231AE102FF008C9804 /* CuriosSwiftTests */,
+				2C540B0C1AE102FE008C9804 /* Products */,
+				4EAB0DD5BEB34818D15AC883 /* Pods */,
+				4A683070D48C233BE22D800D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2C540B0C1AE102FE008C9804 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C540B0B1AE102FE008C9804 /* CuriosSwift.app */,
+				2C540B201AE102FF008C9804 /* CuriosSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C540B0D1AE102FE008C9804 /* CuriosSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2C540B101AE102FE008C9804 /* AppDelegate.swift */,
+				2C540B121AE102FE008C9804 /* ViewController.swift */,
+				2C540B141AE102FE008C9804 /* Main.storyboard */,
+				2C540B171AE102FE008C9804 /* Images.xcassets */,
+				2C540B191AE102FE008C9804 /* LaunchScreen.xib */,
+				2C540B0E1AE102FE008C9804 /* Supporting Files */,
+			);
+			path = CuriosSwift;
+			sourceTree = "<group>";
+		};
+		2C540B0E1AE102FE008C9804 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C540B0F1AE102FE008C9804 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C540B231AE102FF008C9804 /* CuriosSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C540B261AE102FF008C9804 /* CuriosSwiftTests.swift */,
+				2C540B241AE102FF008C9804 /* Supporting Files */,
+			);
+			path = CuriosSwiftTests;
+			sourceTree = "<group>";
+		};
+		2C540B241AE102FF008C9804 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C540B251AE102FF008C9804 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A683070D48C233BE22D800D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51B53102C0702653FDA67CCC /* Pods_CuriosSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EAB0DD5BEB34818D15AC883 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A0276C97DCB62C1BC189B9D /* Pods-CuriosSwift.debug.xcconfig */,
+				7A8FCD5C8B131B34F6D00A66 /* Pods-CuriosSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C540B0A1AE102FE008C9804 /* CuriosSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C540B2A1AE102FF008C9804 /* Build configuration list for PBXNativeTarget "CuriosSwift" */;
+			buildPhases = (
+				ABDF1D2CF3E0CFA17734BADC /* Check Pods Manifest.lock */,
+				2C540B071AE102FE008C9804 /* Sources */,
+				2C540B081AE102FE008C9804 /* Frameworks */,
+				2C540B091AE102FE008C9804 /* Resources */,
+				0B51D80C8F511496845704F1 /* Embed Pods Frameworks */,
+				EC0240DB6E6784BA84B74BED /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CuriosSwift;
+			productName = CuriosSwift;
+			productReference = 2C540B0B1AE102FE008C9804 /* CuriosSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2C540B1F1AE102FF008C9804 /* CuriosSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C540B2D1AE102FF008C9804 /* Build configuration list for PBXNativeTarget "CuriosSwiftTests" */;
+			buildPhases = (
+				2C540B1C1AE102FF008C9804 /* Sources */,
+				2C540B1D1AE102FF008C9804 /* Frameworks */,
+				2C540B1E1AE102FF008C9804 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C540B221AE102FF008C9804 /* PBXTargetDependency */,
+			);
+			name = CuriosSwiftTests;
+			productName = CuriosSwiftTests;
+			productReference = 2C540B201AE102FF008C9804 /* CuriosSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C540B031AE102FE008C9804 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "BoTai Technology";
+				TargetAttributes = {
+					2C540B0A1AE102FE008C9804 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					2C540B1F1AE102FF008C9804 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 2C540B0A1AE102FE008C9804;
+					};
+				};
+			};
+			buildConfigurationList = 2C540B061AE102FE008C9804 /* Build configuration list for PBXProject "CuriosSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2C540B021AE102FE008C9804;
+			productRefGroup = 2C540B0C1AE102FE008C9804 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C540B0A1AE102FE008C9804 /* CuriosSwift */,
+				2C540B1F1AE102FF008C9804 /* CuriosSwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C540B091AE102FE008C9804 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C540B161AE102FE008C9804 /* Main.storyboard in Resources */,
+				2C540B1B1AE102FE008C9804 /* LaunchScreen.xib in Resources */,
+				2C540B181AE102FE008C9804 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C540B1E1AE102FF008C9804 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B51D80C8F511496845704F1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuriosSwift/Pods-CuriosSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABDF1D2CF3E0CFA17734BADC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC0240DB6E6784BA84B74BED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CuriosSwift/Pods-CuriosSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C540B071AE102FE008C9804 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C540B131AE102FE008C9804 /* ViewController.swift in Sources */,
+				2C540B111AE102FE008C9804 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C540B1C1AE102FF008C9804 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C540B271AE102FF008C9804 /* CuriosSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C540B221AE102FF008C9804 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C540B0A1AE102FE008C9804 /* CuriosSwift */;
+			targetProxy = 2C540B211AE102FF008C9804 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C540B141AE102FE008C9804 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C540B151AE102FE008C9804 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2C540B191AE102FE008C9804 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C540B1A1AE102FE008C9804 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C540B281AE102FF008C9804 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C540B291AE102FF008C9804 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C540B2B1AE102FF008C9804 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A0276C97DCB62C1BC189B9D /* Pods-CuriosSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CuriosSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C540B2C1AE102FF008C9804 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A8FCD5C8B131B34F6D00A66 /* Pods-CuriosSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CuriosSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C540B2E1AE102FF008C9804 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CuriosSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CuriosSwift.app/CuriosSwift";
+			};
+			name = Debug;
+		};
+		2C540B2F1AE102FF008C9804 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CuriosSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CuriosSwift.app/CuriosSwift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C540B061AE102FE008C9804 /* Build configuration list for PBXProject "CuriosSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C540B281AE102FF008C9804 /* Debug */,
+				2C540B291AE102FF008C9804 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C540B2A1AE102FF008C9804 /* Build configuration list for PBXNativeTarget "CuriosSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C540B2B1AE102FF008C9804 /* Debug */,
+				2C540B2C1AE102FF008C9804 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C540B2D1AE102FF008C9804 /* Build configuration list for PBXNativeTarget "CuriosSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C540B2E1AE102FF008C9804 /* Debug */,
+				2C540B2F1AE102FF008C9804 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C540B031AE102FE008C9804 /* Project object */;
+}
