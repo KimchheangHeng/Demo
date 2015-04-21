@@ -82,27 +82,27 @@ extension EMModel: MTLJSONSerializing {
         })
     }
     
-    class func subEntityJSONTransformer() -> NSValueTransformer {
-        
-        return MTLValueTransformer.reversibleTransformerWithForwardBlock({ (ModelStr) -> AnyObject! in
-            
-            return MTLJSONAdapter.modelOfClass(EMSubModel.self, fromJSONDictionary: ModelStr as! NSDictionary as [NSObject : AnyObject], error: nil)
-            
-            }, reverseBlock: { (subEntity) -> AnyObject! in
-                
-                return MTLJSONAdapter.JSONDictionaryFromModel(subEntity as! EMSubModel)
-        })
-    }
+//    class func subEntityJSONTransformer() -> NSValueTransformer {
+//        
+//        return MTLValueTransformer.reversibleTransformerWithForwardBlock({ (ModelStr) -> AnyObject! in
+//            
+//            return MTLJSONAdapter.modelOfClass(EMSubModel.self, fromJSONDictionary: ModelStr as! NSDictionary as [NSObject : AnyObject], error: nil)
+//            
+//            }, reverseBlock: { (subEntity) -> AnyObject! in
+//                
+//                return MTLJSONAdapter.JSONDictionaryFromModel(subEntity as! EMSubModel)
+//        })
+//    }
     
-    class func subEntitiesJSONTransformer() -> NSValueTransformer {
+    class func subEntitesJSONTransformer() -> NSValueTransformer {
         
         return MTLValueTransformer.reversibleTransformerWithForwardBlock({ (ModelStrs) -> AnyObject! in
             
-            return MTLJSONAdapter.modelsOfClass(EMSubModel.self, fromJSONArray: ModelStrs as! NSArray as [AnyObject], error: nil)
+            return MTLJSONAdapter.modelsOfClass(EMSubModel.self, fromJSONArray: ModelStrs as! [EMSubModel], error: nil)
             
             }, reverseBlock: { (subEntities) -> AnyObject! in
                 
-                return MTLJSONAdapter.JSONArrayFromModels(subEntities as! NSArray as [AnyObject])
+                return MTLJSONAdapter.JSONArrayFromModels(subEntities as! [EMSubModel])
         })
     }
 }
