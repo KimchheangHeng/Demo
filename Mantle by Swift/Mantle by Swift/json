@@ -1,27 +1,29 @@
 {
-    "name": "Emiaostein",
-    "result": {
-        "date": "2015/02/12",
-        "age": "25",
-        "htmlurl": "www.baidu.com"
-    },
-    "subEntity": {
-        "address": "beijing"
-    },
-    "subEntites": [
-        {
-            "address": "beijing111"
-        },
-        {
-            "address": "beijing222"
-        }
-    ],
-    "center": {
-        "x": 100,
-        "y": 100
-    },
-    "size": {
-        "width": 200,
-        "height": 300
-    }
+"name": "Emiaostein",
+"animaiton": "FadeIn",
+"bool": false,
+"center": {
+"x": 100,
+"y": 100
+},
+"size": {
+"width": 200,
+"height": 300
+},
+"result": {
+"date": "2015/02/12",
+"age": "25",
+"htmlurl": "www.baidu.com"
+},
+
+"subEntites": [
+{
+"type": "Text",
+"value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+},
+{
+"type": "Image",
+"value": "coordinateGraphSimple_2x.png"
+}
+]
 }

@@ -10,15 +10,23 @@ import UIKit
 
 class EMModel: MTLModel {
     
-    var name: String!
+   @objc enum animaitons: Int {
+        case None = 0, FadeIn, FadeOut
+    
+    
+    }
+    
+    var name = ""
     var date: NSDate!
-    var age: NSNumber!
-    var x: NSNumber! = 0
-    var y: NSNumber! = 0
-    var width: NSNumber!
-    var height: NSNumber!
+    var age = 0
+    var x = 0
+    var y = 0
+    var width = 0
+    var height = 0
+    var bool = false
+    var animaiton: animaitons = .None
     var subEntity: EMSubModel!
-    var subEntites: [EMSubModel]!
+    var subEntites: [EMSubModel]! = []
     var url: NSURL!
 }
 
@@ -47,10 +55,14 @@ extension EMModel: MTLJSONSerializing {
         return dateFormatter
     }
     
-//    class func sizeJSONTransformer() -> NSValueTransformer {
-//
-//        
-//    }
+    class func animaitonJSONTransformer() -> NSValueTransformer {
+        
+        return NSValueTransformer.mtl_valueMappingTransformerWithDictionary([
+            "None":animaitons.None.rawValue,
+            "FadeIn":animaitons.FadeIn.rawValue,
+            "FadeOut":animaitons.FadeOut.rawValue
+            ])
+    }
     
     
     class func urlJSONTransformer() -> NSValueTransformer {

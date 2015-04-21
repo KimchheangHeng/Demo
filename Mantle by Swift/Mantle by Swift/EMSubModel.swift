@@ -10,7 +10,12 @@ import UIKit
 
 class EMSubModel: MTLModel {
   
-  var address: String!
+     enum types: String {
+        case Text = "Text", Image = "Image", None = "None"
+    }
+    
+    var type = "None"
+    var value = ""
 }
 
 extension EMSubModel: MTLJSONSerializing {
@@ -19,4 +24,41 @@ extension EMSubModel: MTLJSONSerializing {
     
     return [String: AnyObject]()
   }
+    
+    class func classForParsingJSONDictionary(JSONDictionary: [NSObject : AnyObject]!) -> AnyClass! {
+        
+        if let type = JSONDictionary["type"] as? NSString {
+            
+            switch type {
+            case types.Text.rawValue:
+                
+                return EMTextSubModel.self
+                
+            case types.Image.rawValue:
+                
+                return EMImageSubModel.self
+            default:
+                
+                return EMNoneSubModel.self
+                
+            }
+        } else {
+            return EMNoneSubModel.self
+        }
+    }
+}
+
+class EMImageSubModel: EMSubModel {
+    
+    
+}
+
+class EMTextSubModel: EMSubModel {
+    
+    
+}
+
+class EMNoneSubModel: EMSubModel {
+    
+    
 }

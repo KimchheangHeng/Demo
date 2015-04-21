@@ -19,17 +19,23 @@ class ViewController: UIViewController {
         let stri = NSString(data: inputData, encoding: NSUTF8StringEncoding)
         var error: NSError?
         var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
-        
+//        println(boardsDictionary)
         let model: EMModel = MTLJSONAdapter.modelOfClass(EMModel.self, fromJSONDictionary: boardsDictionary as [NSObject : AnyObject], error: nil) as! EMModel
         
         model.x = 400
-        if let size = model.x {
-            println(size)
+        println(model)
+//        let subs = model.subEntites[0] as? EMTextSubModel
+        
+        
+        for item in model.subEntites {
+            println(item)
         }
+
         model.width = 10000
+        model.animaiton = .FadeOut
         
         let ajson = MTLJSONAdapter.JSONDictionaryFromModel(model)
-        println(ajson)
+//        println(ajson)
         
     }
 
