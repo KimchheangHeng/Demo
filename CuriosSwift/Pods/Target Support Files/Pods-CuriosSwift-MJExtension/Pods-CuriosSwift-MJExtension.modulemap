@@ -1,6 +1,0 @@
-framework module MJExtension {
-  umbrella header "Pods-CuriosSwift-MJExtension-umbrella.h"
-
-  export *
-  module * { export * }
-}

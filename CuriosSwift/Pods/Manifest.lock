@@ -1,10 +1,12 @@
 PODS:
-  - MJExtension (0.3.2)
+  - Mantle (2.0):
+    - Mantle/extobjc (= 2.0)
+  - Mantle/extobjc (2.0)
 
 DEPENDENCIES:
-  - MJExtension (~> 0.3.1)
+  - Mantle (~> 2.0)
 
 SPEC CHECKSUMS:
-  MJExtension: 22417a0858362f4bc63cdb290bde01f5876c939b
+  Mantle: 17de73ef929db2234d76fde2aacfb89ab11c61e8
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.36.0.beta.1

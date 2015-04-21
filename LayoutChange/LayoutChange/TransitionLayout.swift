@@ -17,7 +17,7 @@ class TransitionLayout: UICollectionViewTransitionLayout {
   
   override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
     
-    let layoutAttributes = super.layoutAttributesForElementsInRect(rect) as [UICollectionViewLayoutAttributes]
+    let layoutAttributes = super.layoutAttributesForElementsInRect(rect) as! [UICollectionViewLayoutAttributes]
     if let visualCells = collectionView?.visibleCells() as? [PageCell] {
       
       for pagecell in visualCells {

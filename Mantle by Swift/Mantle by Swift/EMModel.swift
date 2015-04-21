@@ -9,73 +9,88 @@
 import UIKit
 
 class EMModel: MTLModel {
-  
-  var name: String!
-  var date: NSDate!
-  var age: NSNumber!
-  var subEntity: EMSubModel!
-  var subEntites: [EMSubModel]!
-  var url: NSURL!
+    
+    var name: String!
+    var date: NSDate!
+    var age: NSNumber!
+    var x: NSNumber! = 0
+    var y: NSNumber! = 0
+    var width: NSNumber!
+    var height: NSNumber!
+    var subEntity: EMSubModel!
+    var subEntites: [EMSubModel]!
+    var url: NSURL!
 }
 
 
 extension EMModel: MTLJSONSerializing {
-  
-  class func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
     
-    return [
-      "date":"result.date",
-      "age":"result.age",
-      "url":"result.htmlurl"
-    ]
-  }
-  
-  class func dateFormatter() -> NSDateFormatter {
+    class func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
+        let center = "center" + "."
+        let size = "size" + "."
+        return [
+            "date":"result.date",
+            "age":"result.age",
+            "url":"result.htmlurl",
+            "x":center + "x",
+            "y":center + "y",
+            "width":size + "width",
+            "height":size + "height"
+        ]
+    }
     
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-    return dateFormatter
-  }
-  
-  class func urlJSONTransformer() -> NSValueTransformer {
-    
-    return NSValueTransformer(forName: MTLURLValueTransformerName)!
-  }
-  
-  class func dateJSONTransformer() -> NSValueTransformer {
-    
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy/MM/dd"
-    return MTLValueTransformer.reversibleTransformerWithForwardBlock({(dateStr) -> AnyObject! in
-      return dateFormatter.dateFromString(dateStr as String)
-      }, reverseBlock: { (date) -> AnyObject! in
+    class func dateFormatter() -> NSDateFormatter {
         
-        return dateFormatter.stringFromDate(date as NSDate)
-    })
-  }
-  
-  class func subEntityJSONTransformer() -> NSValueTransformer {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        return dateFormatter
+    }
     
-    return MTLValueTransformer.reversibleTransformerWithForwardBlock({ (ModelStr) -> AnyObject! in
-      
-      return MTLJSONAdapter.modelOfClass(EMSubModel.self, fromJSONDictionary: ModelStr as NSDictionary, error: nil)
-      
-      }, reverseBlock: { (subEntity) -> AnyObject! in
-        
-        return MTLJSONAdapter.JSONDictionaryFromModel(subEntity as EMSubModel)
-    })
-  }
-  
-  class func subEntitiesJSONTransformer() -> NSValueTransformer {
+//    class func sizeJSONTransformer() -> NSValueTransformer {
+//
+//        
+//    }
     
-    return MTLValueTransformer.reversibleTransformerWithForwardBlock({ (ModelStrs) -> AnyObject! in
-      
-      return MTLJSONAdapter.modelsOfClass(EMSubModel.self, fromJSONArray: ModelStrs as NSArray, error: nil)
-      
-      }, reverseBlock: { (subEntities) -> AnyObject! in
+    
+    class func urlJSONTransformer() -> NSValueTransformer {
         
-        return MTLJSONAdapter.JSONArrayFromModels(subEntities as NSArray)
-    })
-  }
+        return NSValueTransformer(forName: MTLURLValueTransformerName)!
+    }
+    
+    class func dateJSONTransformer() -> NSValueTransformer {
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        return MTLValueTransformer.reversibleTransformerWithForwardBlock({(dateStr) -> AnyObject! in
+            return dateFormatter.dateFromString(dateStr as! String)
+            }, reverseBlock: { (date) -> AnyObject! in
+                
+                return dateFormatter.stringFromDate(date as! NSDate)
+        })
+    }
+    
+    class func subEntityJSONTransformer() -> NSValueTransformer {
+        
+        return MTLValueTransformer.reversibleTransformerWithForwardBlock({ (ModelStr) -> AnyObject! in
+            
+            return MTLJSONAdapter.modelOfClass(EMSubModel.self, fromJSONDictionary: ModelStr as! NSDictionary as [NSObject : AnyObject], error: nil)
+            
+            }, reverseBlock: { (subEntity) -> AnyObject! in
+                
+                return MTLJSONAdapter.JSONDictionaryFromModel(subEntity as! EMSubModel)
+        })
+    }
+    
+    class func subEntitiesJSONTransformer() -> NSValueTransformer {
+        
+        return MTLValueTransformer.reversibleTransformerWithForwardBlock({ (ModelStrs) -> AnyObject! in
+            
+            return MTLJSONAdapter.modelsOfClass(EMSubModel.self, fromJSONArray: ModelStrs as! NSArray as [AnyObject], error: nil)
+            
+            }, reverseBlock: { (subEntities) -> AnyObject! in
+                
+                return MTLJSONAdapter.JSONArrayFromModels(subEntities as! NSArray as [AnyObject])
+        })
+    }
 }

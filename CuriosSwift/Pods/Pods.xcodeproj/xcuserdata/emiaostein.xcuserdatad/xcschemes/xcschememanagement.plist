@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-CuriosSwift-MJExtension.xcscheme</key>
+		<key>Pods-CuriosSwift-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1F5CCEF868BA530E04D1FC86</key>
+		<key>7CC80916CEBBA608C9EBEC28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C6C4373A8BC41B49F523BF1</key>
+		<key>D01EAB521C1211E9CE02F7D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

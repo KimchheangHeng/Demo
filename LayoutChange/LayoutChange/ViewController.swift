@@ -33,7 +33,7 @@ class ViewController: UIViewController {
            let aprogress = transition.y / 300.0
            let transitionPorgress = PopTransition(aprogress, 0, 1)
           
-            let transitionLayout = collectionView.collectionViewLayout as TransitionLayout
+            let transitionLayout = collectionView.collectionViewLayout as! TransitionLayout
             let progress = transitionPorgress
             transitionLayout.transitionProgress = progress >= 1.0 ? 1.0 : progress + 0.05
             return
@@ -56,7 +56,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        return collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as PageCell
+        return collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)as! PageCell
     }
     
     func collectionView(collectionView: UICollectionView, transitionLayoutForOldLayout fromLayout: UICollectionViewLayout, newLayout toLayout: UICollectionViewLayout) -> UICollectionViewTransitionLayout! {

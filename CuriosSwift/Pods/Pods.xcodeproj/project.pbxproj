@@ -1,557 +1,2173 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		11A60F70EE5973AB4FBF5BF9 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = A400380A81DC278B8FF9E1FA /* MJIvar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		16B3D7974F05E9A3352E0B64 /* Pods-CuriosSwift-MJExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71869E7880D3A3F4C15F4EBB /* Pods-CuriosSwift-MJExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B5EB3AFE15154CB83DA1926 /* MJType.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A71FAF1C539E09A0CD1674D /* MJType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F8C4C7BCCD356A9888519D9 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D98CA602582052AA975E90 /* MJConst.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		39B934E796BC4EE73A15E5B9 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C683E12E6BBCE9F549D6B6F2 /* NSObject+MJCoding.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		405CD9157DD702F9570C0F66 /* Pods-CuriosSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B9B48E7651A0E56F0A4739 /* Pods-CuriosSwift-dummy.m */; };
-		4613750DC39C1806639BCA78 /* MJFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 71598CEFCBFA10549B0C7127 /* MJFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5ABD6CE7D59D96D63A02088F /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BDB8FDE5AB74D01CF70CBC /* NSObject+MJKeyValue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5AC7C9D1DB5C026BFC7916C1 /* NSObject+MJKeyValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 040684687426B7155285E0B7 /* NSObject+MJKeyValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8750F22B46BD3FEDFEBA6439 /* Pods-CuriosSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D1BA824023C7C41E01568F8 /* Pods-CuriosSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D0EE6B9BE3B136DFC5AFA1C /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB5C345578DEA41C189FCA /* MJType.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A0A4F0BF17492C2CD311C1FF /* MJIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = 60B10959E8FE3A570C5091DD /* MJIvar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB5072243F9AF7970A8E86B1 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E500A765CF3E975969492 /* MJFoundation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B4328383EFD267BF5B94BD56 /* NSObject+MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 95507149BEBAFCEE8A8CEB6C /* NSObject+MJIvar.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D13AE17920E89107FC48F502 /* MJConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 2058524EB5CB1707F0CC7F3E /* MJConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEBE02B0ADBD65FAA1E312D9 /* NSObject+MJIvar.h in Headers */ = {isa = PBXBuildFile; fileRef = 9734DB69311EAB9383F561E9 /* NSObject+MJIvar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5AC12F4209C45E94D0DCECA /* MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 750C9080A16ACBE66F2FAC0A /* MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EA7A59010CA9C764EBC2C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DD64AD40CB00B6CFAD7C36 /* Foundation.framework */; };
-		EFE2D4E649A90E6CD469D892 /* Pods-CuriosSwift-MJExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F257F0EBB94824BCD60BC945 /* Pods-CuriosSwift-MJExtension-dummy.m */; };
-		F6E00AF6BE8DEC056FEC3B8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DD64AD40CB00B6CFAD7C36 /* Foundation.framework */; };
-		F97C733E1241A462A9574F7B /* NSObject+MJCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 468754A0F8A44934EFCC4BD2 /* NSObject+MJCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		857862B82CF95B242C5F53F8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 62E367A395488C146F35B377 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C6C4373A8BC41B49F523BF1;
-			remoteInfo = "Pods-CuriosSwift-MJExtension";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		040684687426B7155285E0B7 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJKeyValue.h"; path = "MJExtensionExample/MJExtensionExample/MJExtension/NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
-		07226C1B5A684C3D989A60FB /* Pods-CuriosSwift-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CuriosSwift-environment.h"; sourceTree = "<group>"; };
-		0C8A09887728646583A28B7B /* Pods-CuriosSwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CuriosSwift-frameworks.sh"; sourceTree = "<group>"; };
-		1B9F5B20F596D5B1BCF406A2 /* Pods-CuriosSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CuriosSwift.modulemap"; sourceTree = "<group>"; };
-		1F0416FCECFCFC5C34DD3060 /* MJExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2058524EB5CB1707F0CC7F3E /* MJConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJConst.h; path = MJExtensionExample/MJExtensionExample/MJExtension/MJConst.h; sourceTree = "<group>"; };
-		271B1F90B768F5115B80F228 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		32D98CA602582052AA975E90 /* MJConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJConst.m; path = MJExtensionExample/MJExtensionExample/MJExtension/MJConst.m; sourceTree = "<group>"; };
-		38B8138326CD338021FA1F62 /* Pods-CuriosSwift-MJExtension-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CuriosSwift-MJExtension-Private.xcconfig"; sourceTree = "<group>"; };
-		3A71FAF1C539E09A0CD1674D /* MJType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJType.h; path = MJExtensionExample/MJExtensionExample/MJExtension/MJType.h; sourceTree = "<group>"; };
-		468754A0F8A44934EFCC4BD2 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJCoding.h"; path = "MJExtensionExample/MJExtensionExample/MJExtension/NSObject+MJCoding.h"; sourceTree = "<group>"; };
-		5449F2CD850115BDCA478F73 /* Pods-CuriosSwift-MJExtension.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CuriosSwift-MJExtension.xcconfig"; sourceTree = "<group>"; };
-		5EEA28F0423A1BA8E4E48377 /* Pods_CuriosSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuriosSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F0E500A765CF3E975969492 /* MJFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJFoundation.m; path = MJExtensionExample/MJExtensionExample/MJExtension/MJFoundation.m; sourceTree = "<group>"; };
-		5F769FFADDE4FB643DF8FAC7 /* Pods-CuriosSwift-MJExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CuriosSwift-MJExtension.modulemap"; sourceTree = "<group>"; };
-		60B10959E8FE3A570C5091DD /* MJIvar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJIvar.h; path = MJExtensionExample/MJExtensionExample/MJExtension/MJIvar.h; sourceTree = "<group>"; };
-		71598CEFCBFA10549B0C7127 /* MJFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJFoundation.h; path = MJExtensionExample/MJExtensionExample/MJExtension/MJFoundation.h; sourceTree = "<group>"; };
-		71869E7880D3A3F4C15F4EBB /* Pods-CuriosSwift-MJExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CuriosSwift-MJExtension-umbrella.h"; sourceTree = "<group>"; };
-		750C9080A16ACBE66F2FAC0A /* MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJExtension.h; path = MJExtensionExample/MJExtensionExample/MJExtension/MJExtension.h; sourceTree = "<group>"; };
-		7974E804599E023B2C9D82EA /* Pods-CuriosSwift-MJExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CuriosSwift-MJExtension-prefix.pch"; sourceTree = "<group>"; };
-		83EB5C345578DEA41C189FCA /* MJType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJType.m; path = MJExtensionExample/MJExtensionExample/MJExtension/MJType.m; sourceTree = "<group>"; };
-		8D1BA824023C7C41E01568F8 /* Pods-CuriosSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CuriosSwift-umbrella.h"; sourceTree = "<group>"; };
-		95507149BEBAFCEE8A8CEB6C /* NSObject+MJIvar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJIvar.m"; path = "MJExtensionExample/MJExtensionExample/MJExtension/NSObject+MJIvar.m"; sourceTree = "<group>"; };
-		9734DB69311EAB9383F561E9 /* NSObject+MJIvar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MJIvar.h"; path = "MJExtensionExample/MJExtensionExample/MJExtension/NSObject+MJIvar.h"; sourceTree = "<group>"; };
-		A0DD64AD40CB00B6CFAD7C36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		A400380A81DC278B8FF9E1FA /* MJIvar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJIvar.m; path = MJExtensionExample/MJExtensionExample/MJExtension/MJIvar.m; sourceTree = "<group>"; };
-		B4E71019CE9CD0E9B3CA3CEB /* Pods-CuriosSwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CuriosSwift-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BC19D002EE0358F62E9872E6 /* Pods-CuriosSwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CuriosSwift-resources.sh"; sourceTree = "<group>"; };
-		C0B9B48E7651A0E56F0A4739 /* Pods-CuriosSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CuriosSwift-dummy.m"; sourceTree = "<group>"; };
-		C3BDB8FDE5AB74D01CF70CBC /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJKeyValue.m"; path = "MJExtensionExample/MJExtensionExample/MJExtension/NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
-		C683E12E6BBCE9F549D6B6F2 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MJCoding.m"; path = "MJExtensionExample/MJExtensionExample/MJExtension/NSObject+MJCoding.m"; sourceTree = "<group>"; };
-		C93D7CF1208C319C03499188 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E56696279ED4521B8CDFA5FD /* Pods-CuriosSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CuriosSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		E6631BFCCE5B074794D175DC /* Pods-CuriosSwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CuriosSwift-acknowledgements.plist"; sourceTree = "<group>"; };
-		ECE3151CDB8B58E02842DD4E /* Pods-CuriosSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CuriosSwift.release.xcconfig"; sourceTree = "<group>"; };
-		F257F0EBB94824BCD60BC945 /* Pods-CuriosSwift-MJExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CuriosSwift-MJExtension-dummy.m"; sourceTree = "<group>"; };
-		FAD1798944B78748C0D1C2D1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		6FE92E73A73DB067F7416C63 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA7A59010CA9C764EBC2C06B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB2E38C4759462EDBE3EE5B1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F6E00AF6BE8DEC056FEC3B8D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		46250FEEB086C73BAB06AC5E /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				98F8C6E3CF554E33A04134BB /* Pods-CuriosSwift */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		5659F17B9FFAB616AD2628E4 /* MJExtension */ = {
-			isa = PBXGroup;
-			children = (
-				2058524EB5CB1707F0CC7F3E /* MJConst.h */,
-				32D98CA602582052AA975E90 /* MJConst.m */,
-				750C9080A16ACBE66F2FAC0A /* MJExtension.h */,
-				71598CEFCBFA10549B0C7127 /* MJFoundation.h */,
-				5F0E500A765CF3E975969492 /* MJFoundation.m */,
-				60B10959E8FE3A570C5091DD /* MJIvar.h */,
-				A400380A81DC278B8FF9E1FA /* MJIvar.m */,
-				3A71FAF1C539E09A0CD1674D /* MJType.h */,
-				83EB5C345578DEA41C189FCA /* MJType.m */,
-				468754A0F8A44934EFCC4BD2 /* NSObject+MJCoding.h */,
-				C683E12E6BBCE9F549D6B6F2 /* NSObject+MJCoding.m */,
-				9734DB69311EAB9383F561E9 /* NSObject+MJIvar.h */,
-				95507149BEBAFCEE8A8CEB6C /* NSObject+MJIvar.m */,
-				040684687426B7155285E0B7 /* NSObject+MJKeyValue.h */,
-				C3BDB8FDE5AB74D01CF70CBC /* NSObject+MJKeyValue.m */,
-				BBD98EDA6CE9CC90730AA72B /* Support Files */,
-			);
-			path = MJExtension;
-			sourceTree = "<group>";
-		};
-		5688CD3BDE7F8FE19D511905 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1F0416FCECFCFC5C34DD3060 /* MJExtension.framework */,
-				5EEA28F0423A1BA8E4E48377 /* Pods_CuriosSwift.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8ED893679992AEB1627A4AD9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5659F17B9FFAB616AD2628E4 /* MJExtension */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		98F8C6E3CF554E33A04134BB /* Pods-CuriosSwift */ = {
-			isa = PBXGroup;
-			children = (
-				C93D7CF1208C319C03499188 /* Info.plist */,
-				1B9F5B20F596D5B1BCF406A2 /* Pods-CuriosSwift.modulemap */,
-				B4E71019CE9CD0E9B3CA3CEB /* Pods-CuriosSwift-acknowledgements.markdown */,
-				E6631BFCCE5B074794D175DC /* Pods-CuriosSwift-acknowledgements.plist */,
-				C0B9B48E7651A0E56F0A4739 /* Pods-CuriosSwift-dummy.m */,
-				07226C1B5A684C3D989A60FB /* Pods-CuriosSwift-environment.h */,
-				0C8A09887728646583A28B7B /* Pods-CuriosSwift-frameworks.sh */,
-				BC19D002EE0358F62E9872E6 /* Pods-CuriosSwift-resources.sh */,
-				8D1BA824023C7C41E01568F8 /* Pods-CuriosSwift-umbrella.h */,
-				E56696279ED4521B8CDFA5FD /* Pods-CuriosSwift.debug.xcconfig */,
-				ECE3151CDB8B58E02842DD4E /* Pods-CuriosSwift.release.xcconfig */,
-			);
-			name = "Pods-CuriosSwift";
-			path = "Target Support Files/Pods-CuriosSwift";
-			sourceTree = "<group>";
-		};
-		A0AB7C50B49A91A83294684B /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				A0DD64AD40CB00B6CFAD7C36 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		BBD98EDA6CE9CC90730AA72B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FAD1798944B78748C0D1C2D1 /* Info.plist */,
-				5F769FFADDE4FB643DF8FAC7 /* Pods-CuriosSwift-MJExtension.modulemap */,
-				5449F2CD850115BDCA478F73 /* Pods-CuriosSwift-MJExtension.xcconfig */,
-				38B8138326CD338021FA1F62 /* Pods-CuriosSwift-MJExtension-Private.xcconfig */,
-				F257F0EBB94824BCD60BC945 /* Pods-CuriosSwift-MJExtension-dummy.m */,
-				7974E804599E023B2C9D82EA /* Pods-CuriosSwift-MJExtension-prefix.pch */,
-				71869E7880D3A3F4C15F4EBB /* Pods-CuriosSwift-MJExtension-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-CuriosSwift-MJExtension";
-			sourceTree = "<group>";
-		};
-		E71BA86362557A9B1009F580 = {
-			isa = PBXGroup;
-			children = (
-				271B1F90B768F5115B80F228 /* Podfile */,
-				F01E4466412179FB70BB0744 /* Frameworks */,
-				8ED893679992AEB1627A4AD9 /* Pods */,
-				5688CD3BDE7F8FE19D511905 /* Products */,
-				46250FEEB086C73BAB06AC5E /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		F01E4466412179FB70BB0744 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A0AB7C50B49A91A83294684B /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		8B2AE862AC4D04698C503D77 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D13AE17920E89107FC48F502 /* MJConst.h in Headers */,
-				E5AC12F4209C45E94D0DCECA /* MJExtension.h in Headers */,
-				4613750DC39C1806639BCA78 /* MJFoundation.h in Headers */,
-				A0A4F0BF17492C2CD311C1FF /* MJIvar.h in Headers */,
-				1B5EB3AFE15154CB83DA1926 /* MJType.h in Headers */,
-				F97C733E1241A462A9574F7B /* NSObject+MJCoding.h in Headers */,
-				DEBE02B0ADBD65FAA1E312D9 /* NSObject+MJIvar.h in Headers */,
-				5AC7C9D1DB5C026BFC7916C1 /* NSObject+MJKeyValue.h in Headers */,
-				16B3D7974F05E9A3352E0B64 /* Pods-CuriosSwift-MJExtension-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D1DDEE03A7B8F2336537CD84 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8750F22B46BD3FEDFEBA6439 /* Pods-CuriosSwift-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		1F5CCEF868BA530E04D1FC86 /* Pods-CuriosSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1EA4A5761BF997517EBCD4BF /* Build configuration list for PBXNativeTarget "Pods-CuriosSwift" */;
-			buildPhases = (
-				BFB4D714CB7B20E55DCB876C /* Sources */,
-				EB2E38C4759462EDBE3EE5B1 /* Frameworks */,
-				D1DDEE03A7B8F2336537CD84 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				417A2D4E5858793C69CB2511 /* PBXTargetDependency */,
-			);
-			name = "Pods-CuriosSwift";
-			productName = "Pods-CuriosSwift";
-			productReference = 5EEA28F0423A1BA8E4E48377 /* Pods_CuriosSwift.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9C6C4373A8BC41B49F523BF1 /* Pods-CuriosSwift-MJExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75D039FF0125C4FC18C6E3EC /* Build configuration list for PBXNativeTarget "Pods-CuriosSwift-MJExtension" */;
-			buildPhases = (
-				C5CBFFDC2E0240B320554451 /* Sources */,
-				6FE92E73A73DB067F7416C63 /* Frameworks */,
-				8B2AE862AC4D04698C503D77 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-CuriosSwift-MJExtension";
-			productName = "Pods-CuriosSwift-MJExtension";
-			productReference = 1F0416FCECFCFC5C34DD3060 /* MJExtension.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		62E367A395488C146F35B377 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0510;
-			};
-			buildConfigurationList = 5EC479997CBBBDE0992A367D /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = E71BA86362557A9B1009F580;
-			productRefGroup = 5688CD3BDE7F8FE19D511905 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				1F5CCEF868BA530E04D1FC86 /* Pods-CuriosSwift */,
-				9C6C4373A8BC41B49F523BF1 /* Pods-CuriosSwift-MJExtension */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		BFB4D714CB7B20E55DCB876C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				405CD9157DD702F9570C0F66 /* Pods-CuriosSwift-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C5CBFFDC2E0240B320554451 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F8C4C7BCCD356A9888519D9 /* MJConst.m in Sources */,
-				AB5072243F9AF7970A8E86B1 /* MJFoundation.m in Sources */,
-				11A60F70EE5973AB4FBF5BF9 /* MJIvar.m in Sources */,
-				8D0EE6B9BE3B136DFC5AFA1C /* MJType.m in Sources */,
-				39B934E796BC4EE73A15E5B9 /* NSObject+MJCoding.m in Sources */,
-				B4328383EFD267BF5B94BD56 /* NSObject+MJIvar.m in Sources */,
-				5ABD6CE7D59D96D63A02088F /* NSObject+MJKeyValue.m in Sources */,
-				EFE2D4E649A90E6CD469D892 /* Pods-CuriosSwift-MJExtension-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		417A2D4E5858793C69CB2511 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-CuriosSwift-MJExtension";
-			target = 9C6C4373A8BC41B49F523BF1 /* Pods-CuriosSwift-MJExtension */;
-			targetProxy = 857862B82CF95B242C5F53F8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		4F14068508AA4C5D10ED95DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		5A263D1B7E604BBB1114BC2A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ECE3151CDB8B58E02842DD4E /* Pods-CuriosSwift.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CuriosSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-CuriosSwift/Pods-CuriosSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_CuriosSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5AB74DE68A352C84DBB381BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E56696279ED4521B8CDFA5FD /* Pods-CuriosSwift.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CuriosSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-CuriosSwift/Pods-CuriosSwift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_CuriosSwift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B3D159B3F6A8503DBA32B1E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38B8138326CD338021FA1F62 /* Pods-CuriosSwift-MJExtension-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-CuriosSwift-MJExtension/Pods-CuriosSwift-MJExtension-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-CuriosSwift-MJExtension/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-CuriosSwift-MJExtension/Pods-CuriosSwift-MJExtension.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = MJExtension;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D5CAB14957836F219A49B7E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38B8138326CD338021FA1F62 /* Pods-CuriosSwift-MJExtension-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-CuriosSwift-MJExtension/Pods-CuriosSwift-MJExtension-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-CuriosSwift-MJExtension/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-CuriosSwift-MJExtension/Pods-CuriosSwift-MJExtension.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MJExtension;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ECD1688BA204F6CC9DF22438 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		1EA4A5761BF997517EBCD4BF /* Build configuration list for PBXNativeTarget "Pods-CuriosSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AB74DE68A352C84DBB381BA /* Debug */,
-				5A263D1B7E604BBB1114BC2A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5EC479997CBBBDE0992A367D /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4F14068508AA4C5D10ED95DD /* Debug */,
-				ECD1688BA204F6CC9DF22438 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		75D039FF0125C4FC18C6E3EC /* Build configuration list for PBXNativeTarget "Pods-CuriosSwift-MJExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5CAB14957836F219A49B7E8 /* Debug */,
-				B3D159B3F6A8503DBA32B1E6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 62E367A395488C146F35B377 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>000F7D47CFF500CD3E2D99D4</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Mantle.framework</string>
+			<key>path</key>
+			<string>Mantle.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>0114A9EC8C7D3415481C41F8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>69B6E3659954756712FA1DA8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>063E3259D7FFD8B2F830A49B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>08FEC33430232B47A4FE901D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSValueTransformer+MTLInversionAdditions.m</string>
+			<key>path</key>
+			<string>Mantle/NSValueTransformer+MTLInversionAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>095F543B233FA3668742277F</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>876C329BD7EFA3471ED7CADD</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>7CC80916CEBBA608C9EBEC28</string>
+			<key>remoteInfo</key>
+			<string>Pods-CuriosSwift-Mantle</string>
+		</dict>
+		<key>0A6F57B767D49345B3B67857</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0B647DFA2A5CD1E13AF82ACE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C2FD6F3D018C1D6DBE6A29C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>0C18E9672437CE378374BF2B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D87FC6A7E785DC96B1B23151</string>
+				<string>35D8BF366D6C6228854B1F09</string>
+				<string>F8260C7793A92322D49A9117</string>
+				<string>7FE75E04AFD36511E46E8031</string>
+				<string>A60F7A03B3AC4C0DB88F0B88</string>
+				<string>0D6DAD6C2B99C3ACFCF72FF1</string>
+				<string>4357517D8EF6547C18492C5E</string>
+				<string>A22E92970FCFA3C7E1C8986C</string>
+				<string>FE0FF893599FCDC9EC3B819E</string>
+				<string>218389EB882392F6FDFC3CF3</string>
+				<string>5CB0E2B4F61CDC8634D489E0</string>
+				<string>29C91D50EFAF2FB4BAD51034</string>
+				<string>41798ABAB50C915482F38277</string>
+				<string>5FD7FBB593805E665180CD6D</string>
+				<string>7D9F323E5432601CF384ABAC</string>
+				<string>7770372FD6E9AC6302243BCB</string>
+				<string>22AF914747A2DAFB7A6C9630</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0D6DAD6C2B99C3ACFCF72FF1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C71A307F49379142941D47F1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>0E7BA172F6B9EB42E2B72D7E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>10F0DD502DFD67FF7D69F81A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>18C85BEFA239C84871980670</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>1915921ACF0A85E467D159D6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EXTKeyPathCoding.h</string>
+			<key>path</key>
+			<string>Mantle/extobjc/EXTKeyPathCoding.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1E587DA0F8AF23FFFBF6EAB5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSError+MTLModelException.h</string>
+			<key>path</key>
+			<string>Mantle/NSError+MTLModelException.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>203E4872BC163C6BD82585C0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSObject+MTLComparisonAdditions.m</string>
+			<key>path</key>
+			<string>Mantle/NSObject+MTLComparisonAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>218389EB882392F6FDFC3CF3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D3E73AF9195973ED7241EA2E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>22733C347C2327303F1DD32B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSDictionary+MTLMappingAdditions.m</string>
+			<key>path</key>
+			<string>Mantle/NSDictionary+MTLMappingAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>22AF914747A2DAFB7A6C9630</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C1C2220E65DFC578DF397F87</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>254FE631D2ECE3690AA70C1F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>25F14F34BEB2A3044F3294C5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSValueTransformer+MTLPredefinedTransformerAdditions.m</string>
+			<key>path</key>
+			<string>Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>274658689D3D844601362098</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5D9711F5B1040A9B502DC417</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>294EC4A3456959A7C7E2BD39</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTLTransformerErrorHandling.h</string>
+			<key>path</key>
+			<string>Mantle/MTLTransformerErrorHandling.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>298FFA211E143A91690F9D08</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4D905D6D98B0FDE10B7A161C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-CuriosSwift-Mantle/Pods-CuriosSwift-Mantle-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CuriosSwift-Mantle/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CuriosSwift-Mantle/Pods-CuriosSwift-Mantle.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>Mantle</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>29AA7A0F41F1089DDCDE0182</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSValueTransformer+MTLInversionAdditions.h</string>
+			<key>path</key>
+			<string>Mantle/NSValueTransformer+MTLInversionAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>29C91D50EFAF2FB4BAD51034</key>
+		<dict>
+			<key>fileRef</key>
+			<string>22733C347C2327303F1DD32B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>2AAC1D3EBB48A868258626F5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>EXTScope.m</string>
+			<key>path</key>
+			<string>Mantle/extobjc/EXTScope.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2ABDF6E2DC390B313D63FA42</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>Mantle.h</string>
+			<key>path</key>
+			<string>Mantle/Mantle.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2F216935995D7F4C8EAE0AA1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1915921ACF0A85E467D159D6</string>
+				<string>74F1C3E707F6E4C044842B7B</string>
+				<string>3B4B90553C358C4B74668F14</string>
+				<string>D45C0C800DD67AE5993A0765</string>
+				<string>2AAC1D3EBB48A868258626F5</string>
+				<string>9084FFFB175F8962BECD8B3A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>extobjc</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3062905DAE1F38ADA2E6C208</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30B5E8D8F8EB8DF4986BEC18</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DB1CE9F415478F28CA7FDE6C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>321BA33727EF137805977075</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>10F0DD502DFD67FF7D69F81A</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CuriosSwift/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CuriosSwift/Pods-CuriosSwift.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CuriosSwift</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>354CB117591EFBDB9F6AE893</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EA38FB151D1228837F70EE52</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>35D8BF366D6C6228854B1F09</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2AAC1D3EBB48A868258626F5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>37D3C4533F6AF79EBF69379E</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>E789D4B24FF3436A59DD450A</string>
+				<string>298FFA211E143A91690F9D08</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>38A38E27D879D695A88EF436</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2ABDF6E2DC390B313D63FA42</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>399AA9CCAED7A09C1930C60A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0E7BA172F6B9EB42E2B72D7E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3B4B90553C358C4B74668F14</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>EXTRuntimeExtensions.m</string>
+			<key>path</key>
+			<string>Mantle/extobjc/EXTRuntimeExtensions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3C8860A1E0D17826380E81EE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MTLValueTransformer.m</string>
+			<key>path</key>
+			<string>Mantle/MTLValueTransformer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4036250A9A21D0043A67C663</key>
+		<dict>
+			<key>fileRef</key>
+			<string>715DB8115EA40E81A7FFF192</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4079D6E6DB03108BC0E6BE8D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9084FFFB175F8962BECD8B3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>40FBCB25921226C3222FD2AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1915921ACF0A85E467D159D6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>41798ABAB50C915482F38277</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C4F1DD2416D132C82837F1B6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>42F33AF964290A2D1A3A4AAB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4EC87341B364C2DC7ABDEBC8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4357517D8EF6547C18492C5E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F08F7EF08E2D390E2110C54A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>457B415F9A95596E65EB195E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9673E1A466CC54461398B6F2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>476960AD751777FD5DF0DE89</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>354CB117591EFBDB9F6AE893</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>4935E8F82729AA6F58B1D98C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4B085D82B94AA7DEF18ED90E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4AD3F62A1570427C489AA605</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSDictionary+MTLMappingAdditions.h</string>
+			<key>path</key>
+			<string>Mantle/NSDictionary+MTLMappingAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4B085D82B94AA7DEF18ED90E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0E7BA172F6B9EB42E2B72D7E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4D905D6D98B0FDE10B7A161C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-Mantle-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4E276E03FBB9DB0D07D9836F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-Mantle.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4EC87341B364C2DC7ABDEBC8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9CF7C4B81D386EC44521537A</string>
+				<string>E22AB92BCC9716B35657BC85</string>
+				<string>88A0C84C5F16974CA2D25548</string>
+				<string>F6DEACD43DD1A485BFF090D0</string>
+				<string>5D9711F5B1040A9B502DC417</string>
+				<string>FD2F44C79038ADB5834A9FD8</string>
+				<string>C2FD6F3D018C1D6DBE6A29C5</string>
+				<string>C71A307F49379142941D47F1</string>
+				<string>294EC4A3456959A7C7E2BD39</string>
+				<string>F08F7EF08E2D390E2110C54A</string>
+				<string>651C6609123BDC3238C053E1</string>
+				<string>3C8860A1E0D17826380E81EE</string>
+				<string>2ABDF6E2DC390B313D63FA42</string>
+				<string>F36909BAD0F986CC46AFB01C</string>
+				<string>7F8E80DF140781BA23ED88FD</string>
+				<string>DB1CE9F415478F28CA7FDE6C</string>
+				<string>D3E73AF9195973ED7241EA2E</string>
+				<string>BA5DBBCDADE48008193B5293</string>
+				<string>F70D3272455734F9C50A358A</string>
+				<string>4AD3F62A1570427C489AA605</string>
+				<string>22733C347C2327303F1DD32B</string>
+				<string>1E587DA0F8AF23FFFBF6EAB5</string>
+				<string>C4F1DD2416D132C82837F1B6</string>
+				<string>9673E1A466CC54461398B6F2</string>
+				<string>203E4872BC163C6BD82585C0</string>
+				<string>29AA7A0F41F1089DDCDE0182</string>
+				<string>08FEC33430232B47A4FE901D</string>
+				<string>8DC50EC750A26C29696FFDCB</string>
+				<string>25F14F34BEB2A3044F3294C5</string>
+				<string>4ECF54758B80B341C91D4E39</string>
+				<string>2F216935995D7F4C8EAE0AA1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Mantle</string>
+			<key>path</key>
+			<string>Mantle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4ECF54758B80B341C91D4E39</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>63DED7CF8692E2E3305C4E46</string>
+				<string>7AAD0637CE6BDA6BC5530636</string>
+				<string>4E276E03FBB9DB0D07D9836F</string>
+				<string>4D905D6D98B0FDE10B7A161C</string>
+				<string>C1C2220E65DFC578DF397F87</string>
+				<string>E774CB8BE5A47133825A2039</string>
+				<string>715DB8115EA40E81A7FFF192</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/Pods-CuriosSwift-Mantle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4FEAF91E328E0F3A9D82B443</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>40FBCB25921226C3222FD2AF</string>
+				<string>5438D2D22305006BE7453EAF</string>
+				<string>A3487B33A818E951A78FF0D7</string>
+				<string>B79C4E5E34E83D6E7BC79668</string>
+				<string>274658689D3D844601362098</string>
+				<string>D04E0168A8ACA1179D65F695</string>
+				<string>0B647DFA2A5CD1E13AF82ACE</string>
+				<string>86B627CA85F446EAA7FBF6E7</string>
+				<string>B3C6894B6A257FF98AC903FF</string>
+				<string>38A38E27D879D695A88EF436</string>
+				<string>5501F75CCB81297C357153BF</string>
+				<string>30B5E8D8F8EB8DF4986BEC18</string>
+				<string>D775B566F14A6A8A2FA19579</string>
+				<string>F6975AA6EF997C2BB0AAC6C1</string>
+				<string>80AADB044390C023ACFDB376</string>
+				<string>457B415F9A95596E65EB195E</string>
+				<string>84E64A367088C2B1CB4B7935</string>
+				<string>E245F2C07D7C71BEB3594495</string>
+				<string>4036250A9A21D0043A67C663</string>
+				<string>4079D6E6DB03108BC0E6BE8D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5438D2D22305006BE7453EAF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>74F1C3E707F6E4C044842B7B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>5501F75CCB81297C357153BF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F36909BAD0F986CC46AFB01C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>5AF3449465FCFD46C143474A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C2AB41A332859B0EC483790</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5CB0E2B4F61CDC8634D489E0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F70D3272455734F9C50A358A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>5D9711F5B1040A9B502DC417</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTLModel+NSCoding.h</string>
+			<key>path</key>
+			<string>Mantle/MTLModel+NSCoding.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5FD7FBB593805E665180CD6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>203E4872BC163C6BD82585C0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>63DED7CF8692E2E3305C4E46</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>651C6609123BDC3238C053E1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTLValueTransformer.h</string>
+			<key>path</key>
+			<string>Mantle/MTLValueTransformer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69B6E3659954756712FA1DA8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3062905DAE1F38ADA2E6C208</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>715DB8115EA40E81A7FFF192</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-Mantle-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7314104A5A871035F07F043F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>74F1C3E707F6E4C044842B7B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EXTRuntimeExtensions.h</string>
+			<key>path</key>
+			<string>Mantle/extobjc/EXTRuntimeExtensions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7770372FD6E9AC6302243BCB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>25F14F34BEB2A3044F3294C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>7AAD0637CE6BDA6BC5530636</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-Mantle.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7CC80916CEBBA608C9EBEC28</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>37D3C4533F6AF79EBF69379E</string>
+			<key>buildPhases</key>
+			<array>
+				<string>0C18E9672437CE378374BF2B</string>
+				<string>D525082567D2FFA3E7573458</string>
+				<string>4FEAF91E328E0F3A9D82B443</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-CuriosSwift-Mantle</string>
+			<key>productName</key>
+			<string>Pods-CuriosSwift-Mantle</string>
+			<key>productReference</key>
+			<string>000F7D47CFF500CD3E2D99D4</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>7D9F323E5432601CF384ABAC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>08FEC33430232B47A4FE901D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>7F8E80DF140781BA23ED88FD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSArray+MTLManipulationAdditions.m</string>
+			<key>path</key>
+			<string>Mantle/NSArray+MTLManipulationAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7FE75E04AFD36511E46E8031</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FD2F44C79038ADB5834A9FD8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>80AADB044390C023ACFDB376</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E587DA0F8AF23FFFBF6EAB5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>82EFE082AB7A8B336D291EE6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0E7BA172F6B9EB42E2B72D7E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>84E64A367088C2B1CB4B7935</key>
+		<dict>
+			<key>fileRef</key>
+			<string>29AA7A0F41F1089DDCDE0182</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>86B627CA85F446EAA7FBF6E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>294EC4A3456959A7C7E2BD39</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>876C329BD7EFA3471ED7CADD</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>F58569A07DF2F84336C88F79</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>DDA7CCB957AF51FB987A82B0</string>
+			<key>productRefGroup</key>
+			<string>D4D38106404BA443198AC9C9</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>D01EAB521C1211E9CE02F7D5</string>
+				<string>7CC80916CEBBA608C9EBEC28</string>
+			</array>
+		</dict>
+		<key>88A0C84C5F16974CA2D25548</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTLModel.h</string>
+			<key>path</key>
+			<string>Mantle/MTLModel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DC50EC750A26C29696FFDCB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSValueTransformer+MTLPredefinedTransformerAdditions.h</string>
+			<key>path</key>
+			<string>Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9084FFFB175F8962BECD8B3A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>metamacros.h</string>
+			<key>path</key>
+			<string>Mantle/extobjc/metamacros.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9673E1A466CC54461398B6F2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSObject+MTLComparisonAdditions.h</string>
+			<key>path</key>
+			<string>Mantle/NSObject+MTLComparisonAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9A780D62B172BEBA67D2DCE0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>254FE631D2ECE3690AA70C1F</string>
+				<string>E58EC6EC6D4DAABC8D9D09A3</string>
+				<string>063E3259D7FFD8B2F830A49B</string>
+				<string>CF7BE2BAB6FB220540C393C0</string>
+				<string>EA38FB151D1228837F70EE52</string>
+				<string>D3F5168568A22B9D1EE8D513</string>
+				<string>5C2AB41A332859B0EC483790</string>
+				<string>5AF3449465FCFD46C143474A</string>
+				<string>3062905DAE1F38ADA2E6C208</string>
+				<string>10F0DD502DFD67FF7D69F81A</string>
+				<string>0A6F57B767D49345B3B67857</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-CuriosSwift</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-CuriosSwift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9AF8344B46824673608EE51F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Pods-CuriosSwift-Mantle</string>
+			<key>target</key>
+			<string>7CC80916CEBBA608C9EBEC28</string>
+			<key>targetProxy</key>
+			<string>095F543B233FA3668742277F</string>
+		</dict>
+		<key>9CF7C4B81D386EC44521537A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTLJSONAdapter.h</string>
+			<key>path</key>
+			<string>Mantle/MTLJSONAdapter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A22E92970FCFA3C7E1C8986C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3C8860A1E0D17826380E81EE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>A3487B33A818E951A78FF0D7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D45C0C800DD67AE5993A0765</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>A60F7A03B3AC4C0DB88F0B88</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F6DEACD43DD1A485BFF090D0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>A7191C5C3A5AA88BD598BBC6</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0A6F57B767D49345B3B67857</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CuriosSwift/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CuriosSwift/Pods-CuriosSwift.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CuriosSwift</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B3C6894B6A257FF98AC903FF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>651C6609123BDC3238C053E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B79C4E5E34E83D6E7BC79668</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CF7C4B81D386EC44521537A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>BA5DBBCDADE48008193B5293</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSDictionary+MTLManipulationAdditions.h</string>
+			<key>path</key>
+			<string>Mantle/NSDictionary+MTLManipulationAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BD7B41C7E2B0148790BE3FF2</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>321BA33727EF137805977075</string>
+				<string>A7191C5C3A5AA88BD598BBC6</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C1C2220E65DFC578DF397F87</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-Mantle-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C2FD6F3D018C1D6DBE6A29C5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MTLReflection.h</string>
+			<key>path</key>
+			<string>Mantle/MTLReflection.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C4F1DD2416D132C82837F1B6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSError+MTLModelException.m</string>
+			<key>path</key>
+			<string>Mantle/NSError+MTLModelException.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C71A307F49379142941D47F1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MTLReflection.m</string>
+			<key>path</key>
+			<string>Mantle/MTLReflection.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CF7BE2BAB6FB220540C393C0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D01EAB521C1211E9CE02F7D5</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>BD7B41C7E2B0148790BE3FF2</string>
+			<key>buildPhases</key>
+			<array>
+				<string>476960AD751777FD5DF0DE89</string>
+				<string>E710D9D3ABAF7D3DFB4A3689</string>
+				<string>0114A9EC8C7D3415481C41F8</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>9AF8344B46824673608EE51F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-CuriosSwift</string>
+			<key>productName</key>
+			<string>Pods-CuriosSwift</string>
+			<key>productReference</key>
+			<string>F1812C017E7DAA7B35475393</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>D04E0168A8ACA1179D65F695</key>
+		<dict>
+			<key>fileRef</key>
+			<string>88A0C84C5F16974CA2D25548</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D3E73AF9195973ED7241EA2E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSDictionary+MTLJSONKeyPath.m</string>
+			<key>path</key>
+			<string>Mantle/NSDictionary+MTLJSONKeyPath.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D3F5168568A22B9D1EE8D513</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-environment.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D45C0C800DD67AE5993A0765</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>EXTScope.h</string>
+			<key>path</key>
+			<string>Mantle/extobjc/EXTScope.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D4D38106404BA443198AC9C9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>000F7D47CFF500CD3E2D99D4</string>
+				<string>F1812C017E7DAA7B35475393</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D525082567D2FFA3E7573458</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>82EFE082AB7A8B336D291EE6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D775B566F14A6A8A2FA19579</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BA5DBBCDADE48008193B5293</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D87FC6A7E785DC96B1B23151</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3B4B90553C358C4B74668F14</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>DB1CE9F415478F28CA7FDE6C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSDictionary+MTLJSONKeyPath.h</string>
+			<key>path</key>
+			<string>Mantle/NSDictionary+MTLJSONKeyPath.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DDA7CCB957AF51FB987A82B0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>18C85BEFA239C84871980670</string>
+				<string>4935E8F82729AA6F58B1D98C</string>
+				<string>42F33AF964290A2D1A3A4AAB</string>
+				<string>D4D38106404BA443198AC9C9</string>
+				<string>DEFF6BE0ABD1769535601AD2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEFF6BE0ABD1769535601AD2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9A780D62B172BEBA67D2DCE0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E22AB92BCC9716B35657BC85</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MTLJSONAdapter.m</string>
+			<key>path</key>
+			<string>Mantle/MTLJSONAdapter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E245F2C07D7C71BEB3594495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DC50EC750A26C29696FFDCB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E58EC6EC6D4DAABC8D9D09A3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E710D9D3ABAF7D3DFB4A3689</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>399AA9CCAED7A09C1930C60A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E774CB8BE5A47133825A2039</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-Mantle-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E789D4B24FF3436A59DD450A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4D905D6D98B0FDE10B7A161C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/Pods-CuriosSwift-Mantle/Pods-CuriosSwift-Mantle-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CuriosSwift-Mantle/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CuriosSwift-Mantle/Pods-CuriosSwift-Mantle.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>Mantle</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>EA38FB151D1228837F70EE52</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-CuriosSwift-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F08F7EF08E2D390E2110C54A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MTLTransformerErrorHandling.m</string>
+			<key>path</key>
+			<string>Mantle/MTLTransformerErrorHandling.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F1812C017E7DAA7B35475393</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_CuriosSwift.framework</string>
+			<key>path</key>
+			<string>Pods_CuriosSwift.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F36909BAD0F986CC46AFB01C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSArray+MTLManipulationAdditions.h</string>
+			<key>path</key>
+			<string>Mantle/NSArray+MTLManipulationAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F58569A07DF2F84336C88F79</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>7314104A5A871035F07F043F</string>
+				<string>FD0B24B8E5FAC260A75FF253</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F6975AA6EF997C2BB0AAC6C1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4AD3F62A1570427C489AA605</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>F6DEACD43DD1A485BFF090D0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MTLModel.m</string>
+			<key>path</key>
+			<string>Mantle/MTLModel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F70D3272455734F9C50A358A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSDictionary+MTLManipulationAdditions.m</string>
+			<key>path</key>
+			<string>Mantle/NSDictionary+MTLManipulationAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F8260C7793A92322D49A9117</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E22AB92BCC9716B35657BC85</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>FD0B24B8E5FAC260A75FF253</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>RELEASE=1</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>FD2F44C79038ADB5834A9FD8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MTLModel+NSCoding.m</string>
+			<key>path</key>
+			<string>Mantle/MTLModel+NSCoding.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FE0FF893599FCDC9EC3B819E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7F8E80DF140781BA23ED88FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>876C329BD7EFA3471ED7CADD</string>
+</dict>
+</plist>
