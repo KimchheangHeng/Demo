@@ -51,7 +51,8 @@ extension EMModel: MTLJSONSerializing {
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+//        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter
     }
     
@@ -72,8 +73,8 @@ extension EMModel: MTLJSONSerializing {
     
     class func dateJSONTransformer() -> NSValueTransformer {
         
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
+        let dateFormatter = self.dateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         return MTLValueTransformer.reversibleTransformerWithForwardBlock({(dateStr) -> AnyObject! in
             return dateFormatter.dateFromString(dateStr as! String)
             }, reverseBlock: { (date) -> AnyObject! in

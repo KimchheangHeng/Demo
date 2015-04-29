@@ -23,19 +23,19 @@ class ViewController: UIViewController {
         let model: EMModel = MTLJSONAdapter.modelOfClass(EMModel.self, fromJSONDictionary: boardsDictionary as [NSObject : AnyObject], error: nil) as! EMModel
         
         model.x = 400
-        println(model)
+        println(model.date)
 //        let subs = model.subEntites[0] as? EMTextSubModel
         
         
         for item in model.subEntites {
-            println(item)
+//            println(item)
         }
 
         model.width = 10000
         model.animaiton = .FadeOut
         
         let ajson = MTLJSONAdapter.JSONDictionaryFromModel(model)
-//        println(ajson)
+        println(ajson)
         
     }
 
